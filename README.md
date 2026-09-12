@@ -1,4 +1,4 @@
-![Planting](https://raw.githubusercontent.com/geethasree0713/SURETRUST-INTERNSHIP/main/suretrust/community-services/planting.png)
+![Planting](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/assets/logo.png)
 # SURE ProEd (formerly SURE Trust)
 
 ## Skill Upgradation for Rural youth Empowerment Trust
