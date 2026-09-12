@@ -1,285 +1,432 @@
+# 🐞 DebugAssist – Intelligent Bug Diagnosis & Resolution
 
-  <div align="center" style="border: 2px solid #ccc; padding: 20px; border-radius: 12px; width: 80%; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.15);">
-
-    <img
-        width="180"
-        height="220"
-        alt="Logo - SURE ProEd"
-        src="https://github.com/user-attachments/assets/88fa5098-24b1-4ece-87df-95eb920ea721"
-        style="border-radius: 10px;"
-    />
-
-    <h1 align="center" style="font-family: Arial; font-weight: 600; margin-top: 15px;">
-        SURE ProEd (formerly SURE Trust)
-    </h1>
-
-    <h2 style="color: #2b6cb0; font-family: Arial;">
-        Skill Upgradation for Rural youth Empowerment Trust
-    </h2>
-
-</div>
-
-<hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
-
-<div style="padding: 20px; border: 2px solid #ddd; border-radius: 12px; width: 90%; margin: auto; background: #fafafa; font-family: Arial;">
-
-<h2 style="color:#333;">Student Details</h2>
-
-<div align="left" style="margin: 20px; font-size: 16px;">
-
-<p><strong>Name:</strong> Manyam Geetha Sree</p>
-
-<p><strong>Email ID:</strong>geethamsree9@gmail.com</p>
-
-<p><strong>College Name:</strong> Nitte Meenakshi Institute of Technology, Bengaluru</p>
-
-<p><strong>Branch/Specialization:</strong> Information Science Engineering</p>
-
-
-
-</div>
-
-<hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
-
-<h2 style="color:#333;">Course Details</h2>
-
-<div align="left" style="margin: 20px; font-size: 16px;">
-
-<p><strong>Course Opted:</strong> Generative AI</p>
-
-<p><strong>Instructor Name:</strong> prujith ramakrishnan</p>
-
-<p><strong>Duration:</strong> 6 months</p>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-<hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
-
-## **Table of Contents**
-
-- [Overall Learning](#overall-learning)
-- [Projects Completed](#projects-completed)
-- [Project Introduction](#project-introduction)
-- [How the System Works](#how-the-system-works)
-- [Technologies Used](#technologies-used)
-- [Roles and Responsibilities](#roles-and-responsibilities)
-- [Project Report](#project-report)
-- [Known Limitations](#known-limitations)
-- [Learnings from LST & SST](#learnings-from-lst--sst)
-- [Community Services](#community-services)
-- [Certificate](#certificate)
-- [Acknowledgments](#acknowledgments)
+An AI-powered software debugging assistance system that analyzes bug reports, stack traces, and error logs, retrieves similar historical defects using semantic similarity, and provides structured insights to help developers diagnose and resolve software issues.
 
 ---
 
-## **Overall Learning**
+## 📌 Overview
 
-During my SURE ProEd Generative AI internship, I developed a practical understanding of Generative AI, Retrieval-Augmented Generation (RAG), embeddings, semantic search, agent-based workflows, and AI-assisted software development.
+**DebugAssist** is designed to reduce the time and effort required for software debugging by using **Natural Language Processing, text embeddings, semantic similarity search, historical defect analysis, and a multi-agent architecture**.
 
-The internship provided hands-on exposure to understanding real-world problems, researching suitable AI techniques, designing system architectures, working with datasets, implementing retrieval pipelines, and documenting technical solutions.
+The system accepts information such as:
 
-As part of the internship, I worked on **DebugAssist: Intelligent Bug Diagnosis & Resolution**, an AI-powered system designed to assist developers in analyzing software bugs, identifying similar historical defects, determining possible root causes, and suggesting suitable resolutions.
+* Bug descriptions
+* Error messages
+* Stack traces
+* Error logs
+* Related debugging information
 
-Through this project, I strengthened my skills in:
+It then processes the input, retrieves historically similar defects from a **Historical Defect Knowledge Base**, and passes the information through specialized analysis components to generate structured debugging insights.
 
-- Generative AI concepts
-- Retrieval-Augmented Generation (RAG)
-- Text embeddings
-- Semantic similarity search
-- Historical defect analysis
-- Multi-agent system design
-- Python development
-- Streamlit application development
-- Data preprocessing and analysis
-- Software debugging concepts
-- Technical documentation
-- Problem-solving and system design
+### Key Capabilities
 
----
-
-## **Project Completed**
-
-<div align="left" style="margin: 20px; font-size: 16px;">
-
-<p>
-<strong>
-<a href="#project1">Project:</a>
-</strong>
-DebugAssist: Intelligent Bug Diagnosis & Resolution
-</p>
-
-</div>
+* 🔍 Bug triage and classification
+* 📚 Historical defect retrieval
+* 🔗 Semantic similarity search
+* 🧩 Duplicate defect detection
+* 🧠 Root-cause analysis assistance
+* 🛠️ Remediation suggestions
+* 📊 Structured debugging results
 
 ---
 
-<!-- Project 1 -->
-
-<h2 id="project1">Project 1: DebugAssist – Intelligent Bug Diagnosis & Resolution</h2>
-
-## **Project Introduction**
-
-**DebugAssist: Intelligent Bug Diagnosis & Resolution** is an AI-powered software debugging assistance system designed to help developers analyze and resolve software defects more efficiently.
-
-The system accepts bug reports, stack traces, error logs, or related debugging information and processes the submitted information to identify important characteristics of the defect.
-
-It uses a combination of:
-
-- Natural Language Processing
-- Text embeddings
-- Semantic similarity
-- Retrieval-Augmented Generation concepts
-- Historical defect analysis
-- Multi-agent architecture
-
-The system maintains a **Historical Defect Knowledge Base** created using publicly available software defect datasets from sources such as Mozilla, Apache, and Eclipse through Kaggle.
-
-The historical defects are processed and converted into embeddings so that a newly submitted bug can be compared with previously reported defects.
-
-The retrieved historical defects provide additional context that can help the system analyze the current issue and generate more relevant findings and possible resolutions.
-
----
-
-<<<<<<< HEAD:Creation-of-Intelligent-Bug-Diagnosis-Platform-with-Fix-Recommendation-Assistance-Group-1-main/README.md
-## **How the System Works**
-
-The overall workflow of DebugAssist can be represented as follows:
+## 🏗️ System Architecture
 
 ```text
                          User
-                           |
-                           v
-              Bug Submission Module
-                           |
-                           v
-        Bug Report / Stack Trace / Error Log
-                           |
-                           v
-              Text Processing & Chunking
-                           |
-                           v
-                    Text Embeddings
-                           |
-                           v
-             Semantic Similarity Search
-                           |
-                           v
-        Historical Defect Knowledge Base
-                           |
-                           v
-                 Multi-Agent Pipeline
-                           |
-        +------------------+------------------+
-        |                  |                  |
-        v                  v                  v
-   Triage Agent      Log Analysis Agent   Root Cause Agent
-        |                  |                  |
-        +------------------+------------------+
-                           |
-                           v
-                 Duplicate Detection
-                       Agent
-                           |
-                           v
-                  Remediation Agent
-                           |
-                           v
-              Structured Findings
-                           |
-                           v
-                 Resolution Display
-
-## **Learnings from LST and SST**
-
-The LST and SST sessions provided me with valuable learning beyond the technical aspects of the internship. These sessions helped me improve my communication, presentation, teamwork, and professional skills.
-
-Through these sessions, I learned how to communicate technical ideas clearly, participate actively in discussions, work effectively with others, and approach problems with a structured mindset.
-
-The sessions also improved my confidence in presenting my work and interacting with peers and mentors. These learnings helped me become more comfortable in professional and collaborative environments.
-
----
-
-## **Community Services**
-
-As part of the SURE ProEd internship program, I participated in community-oriented activities that helped me understand the importance of social responsibility and contributing to society.
-
-### **Activities Involved**
-
-- **[Community Activity 1]** – Describe the activity you participated in and your contribution.
-- **[Community Activity 2]** – Describe the activity and how you contributed.
-- **[Community Activity 3]** – Describe the activity and your involvement.
-
-### **Impact / Contribution**
-
-- Contributed actively to the successful completion of the community activities.
-- Developed better communication and coordination skills through participation.
-- Gained a greater understanding of social responsibility and community involvement.
-- Improved teamwork, empathy, and interpersonal skills.
-
-### **Photos**
-
-<!-- Replace the links below with your actual community service photo links -->
-
-<div align="center">
-
-<img src="PUT_YOUR_PHOTO_LINK_HERE" alt="Community Service Photo 1" width="30%">
-
-<img src="PUT_YOUR_PHOTO_LINK_HERE" alt="Community Service Photo 2" width="30%">
-
-<img src="PUT_YOUR_PHOTO_LINK_HERE" alt="Community Service Photo 3" width="30%">
-
-</div>
-=======
-## Project Structure
-
-src/          → application source code (modules, agents)
-data/         → datasets (raw and cleaned)
-notebooks/    → exploration/testing notebooks (chunking, embeddings, retrieval testing)
->>>>>>> c64b3fc (update project):capstone/README.md
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │   Bug Submission    │
+                │      Module         │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Text Preprocessing  │
+                │ & Chunking          │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Text Embeddings     │
+                │ Sentence Transformer│
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Semantic Similarity │
+                │ Search              │
+                └──────────┬──────────┘
+                           │
+                           ▼
+          ┌────────────────────────────────┐
+          │ Historical Defect Knowledge    │
+          │ Base                           │
+          │ Mozilla | Apache | Eclipse     │
+          └────────────────┬───────────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Multi-Agent         │
+                │ Analysis Pipeline   │
+                └──────────┬──────────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+   Triage Agent      Log Analysis       Root Cause
+                        Agent              Agent
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ▼
+                ┌─────────────────────┐
+                │ Duplicate Detection │
+                │ Agent               │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Remediation Agent   │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Structured Findings │
+                └─────────────────────┘
+```
 
 ---
 
-## **Certificate**
+## ⚙️ How It Works
 
-The internship certificate serves as an official acknowledgment of my successful participation and completion of the SURE ProEd internship program.
+### 1. Bug Submission
 
-The internship provided me with practical exposure to Generative AI concepts, project development, research, documentation, and professional skills. The certificate represents my participation in the program and the knowledge and experience gained throughout the internship.
+The developer provides a bug report, error message, stack trace, or log information through the Streamlit interface.
 
-### **Internship Certificate**
+### 2. Text Processing
 
-<!-- Replace the link below with your official certificate image link -->
+The submitted information is cleaned and prepared for analysis. Larger textual inputs can be divided into manageable chunks.
 
-<p align="center">
+### 3. Embedding Generation
 
-<img 
-src="PUT_YOUR_CERTIFICATE_IMAGE_LINK_HERE" 
-alt="SURE ProEd Internship Certificate" 
-width="80%"
->
+The text is converted into numerical vector representations using:
 
-</p>
+**Sentence Transformers – `all-MiniLM-L6-v2`**
+
+These embeddings capture the semantic meaning of the bug description rather than relying only on exact keyword matching.
+
+### 4. Semantic Similarity Search
+
+The new bug embedding is compared with embeddings of historical defects using **cosine similarity**.
+
+The system retrieves historically similar defects that can provide useful debugging context.
+
+### 5. Multi-Agent Analysis
+
+The retrieved information and submitted bug are processed through specialized agents:
+
+| Agent                         | Responsibility                               |
+| ----------------------------- | -------------------------------------------- |
+| **Triage Agent**              | Performs initial bug analysis                |
+| **Log Analysis Agent**        | Examines logs, errors, and stack traces      |
+| **Root Cause Agent**          | Identifies possible underlying causes        |
+| **Duplicate Detection Agent** | Finds potentially related historical defects |
+| **Remediation Agent**         | Suggests possible corrective approaches      |
+
+### 6. Structured Output
+
+The system presents the analysis as structured debugging findings to help developers investigate the issue more efficiently.
 
 ---
 
-## **Acknowledgments**
+## 📚 Historical Defect Knowledge Base
 
-I would like to express my sincere gratitude to **SURE ProEd (formerly SURE Trust)** for providing me with the opportunity to participate in the Generative AI internship program.
+DebugAssist uses publicly available historical software defect datasets associated with projects such as:
 
-I am thankful to my trainers and instructors for their continuous guidance, technical support, valuable feedback, and encouragement throughout the internship.
+* **Mozilla**
+* **Apache**
+* **Eclipse**
 
-I would also like to thank the SURE ProEd team for providing a platform where I could learn emerging technologies and apply my knowledge to a practical real-world project.
+The historical records are cleaned and transformed into textual representations before generating embeddings.
 
-Special thanks to:
+The knowledge base can contain information such as:
 
-- **[Trainer/Mentor Name]** – for technical guidance and mentorship throughout the internship.
-- **[Instructor Name]** – for providing valuable knowledge and support during the training sessions.
-- **SURE ProEd Team** – for providing the learning environment and project opportunities.
-- **My College Faculty** – for their encouragement and support.
-- **My Peers and Team Members** – for their collaboration, discussions, and feedback.
+* Bug descriptions
+* Error information
+* Project information
+* Defect categories
+* Resolution information
+* Related metadata
 
-I am grateful for this experience, which helped me strengthen my technical knowledge, professional skills, and confidence in working on real-world Generative AI applications.
+The historical embeddings are used as the retrieval source for semantic similarity search.
+
+---
+
+## 🧠 Retrieval Approach
+
+The current implementation uses **embedding-based semantic retrieval**.
+
+```text
+New Bug
+   │
+   ▼
+Embedding Model
+   │
+   ▼
+Query Vector
+   │
+   ▼
+Compare with Historical Vectors
+   │
+   ▼
+Cosine Similarity
+   │
+   ▼
+Top Similar Defects
+```
+
+### Why Semantic Similarity?
+
+Traditional keyword search may fail when two bugs describe the same problem using different words.
+
+For example:
+
+```text
+Bug A:
+"Application crashes when the user uploads a large file."
+
+Bug B:
+"Program terminates unexpectedly while processing oversized uploads."
+```
+
+Although the wording differs, their meanings are closely related.
+
+Embedding-based retrieval can identify this semantic relationship.
+
+---
+
+## 🛠️ Technologies Used
+
+| Category             | Technology                 |
+| -------------------- | -------------------------- |
+| Programming Language | Python                     |
+| User Interface       | Streamlit                  |
+| Embeddings           | Sentence Transformers      |
+| Embedding Model      | `all-MiniLM-L6-v2`         |
+| Similarity Search    | Cosine Similarity          |
+| ML Library           | Scikit-learn               |
+| Text Processing      | LangChain Text Splitters   |
+| Data Processing      | pandas                     |
+| Knowledge Base       | Historical Defect Datasets |
+| Agent Architecture   | Custom Python Classes      |
+
+> **Note:** ChromaDB was explored during development, but the current live implementation performs similarity search using saved embeddings and in-memory cosine similarity.
+
+---
+
+## 📂 Project Structure
+
+```text
+DebugAssist/
+│
+├── app/
+│   ├── agents/
+│   │   ├── triage_agent.py
+│   │   ├── log_analysis_agent.py
+│   │   ├── root_cause_agent.py
+│   │   ├── duplicate_detection_agent.py
+│   │   └── remediation_agent.py
+│   │
+│   ├── retrieval/
+│   │   └── similarity_search.py
+│   │
+│   ├── preprocessing/
+│   │   └── text_processing.py
+│   │
+│   └── ...
+│
+├── data/
+│   └── historical_defects/
+│
+├── docs/
+│   ├── 01_concepts.md
+│   ├── 02_architecture.md
+│   ├── 03_agents.md
+│   └── 04_knowledge_base.md
+│
+├── embeddings/
+│   └── saved_embeddings
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+*The exact folder structure may vary depending on the current repository implementation.*
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd <PROJECT_FOLDER>
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux/macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your browser.
+
+---
+
+## 💡 Example Workflow
+
+```text
+Input:
+"NullPointerException occurs when opening the project configuration."
+
+                    ↓
+
+Text Processing
+
+                    ↓
+
+Embedding Generation
+(all-MiniLM-L6-v2)
+
+                    ↓
+
+Semantic Similarity Search
+
+                    ↓
+
+Historical Defect Retrieval
+
+                    ↓
+
+Multi-Agent Analysis
+
+                    ↓
+
+┌──────────────────────────────┐
+│ Possible Root Cause          │
+│ Similar Historical Defects   │
+│ Duplicate Probability        │
+│ Suggested Remediation        │
+└──────────────────────────────┘
+```
+
+---
+
+## 👩‍💻 My Contributions
+
+During the development of DebugAssist, I contributed to:
+
+* Researching AI-assisted software debugging approaches
+* Studying RAG and semantic retrieval concepts
+* Preparing and exploring historical defect datasets
+* Implementing text preprocessing
+* Generating embeddings using Sentence Transformers
+* Implementing cosine-similarity-based retrieval
+* Designing the multi-agent analysis workflow
+* Developing Streamlit application components
+* Structuring the historical defect knowledge base
+* Documenting system architecture and limitations
+* Testing and evaluating retrieval behavior
+
+---
+
+## ⚠️ Known Limitations
+
+* Retrieval quality depends on the coverage and quality of the historical defect datasets.
+* Historical grounding may be weaker for programming languages that are underrepresented in the datasets.
+* Multiple unrelated bugs submitted together may not always be separated correctly.
+* The current implementation uses in-memory similarity search rather than a production vector database.
+* Remediation suggestions should be reviewed and validated by developers.
+* The system is intended as a **developer-assistance tool**, not a replacement for manual debugging, testing, or expert review.
+
+---
+
+## 🔮 Future Enhancements
+
+Potential improvements include:
+
+* Production-ready vector database integration
+* Larger and continuously updated defect knowledge base
+* Improved duplicate detection
+* Support for additional programming languages
+* Better root-cause analysis
+* LLM-based remediation generation
+* Automated code-fix recommendations
+* GitHub issue integration
+* Jira integration
+* Developer feedback loops
+* Advanced agent orchestration
+* Evaluation metrics for retrieval and diagnosis quality
+
+---
+
+## 📖 Documentation
+
+Detailed project documentation:
+
+| Document                    | Description                                                       |
+| --------------------------- | ----------------------------------------------------------------- |
+| `docs/01_concepts.md`       | Defect analysis, RAG, semantic similarity, and debugging concepts |
+| `docs/02_architecture.md`   | System architecture and data flow                                 |
+| `docs/03_agents.md`         | Multi-agent responsibilities and workflow                         |
+| `docs/04_knowledge_base.md` | Historical defect knowledge base                                  |
+
+---
+
+## 📌 Project Links
+
+**GitHub Repository:**
+`<YOUR_GITHUB_REPOSITORY_URL>`
+
+**Project Report:**
+`<YOUR_PROJECT_REPORT_URL>`
+
+---
+
+## 📜 License
+
+This project is developed as part of the **SURE ProEd Generative AI Internship** for educational and project-development purposes.
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to **SURE ProEd (formerly SURE Trust)**, trainers, mentors, and peers for their guidance and support throughout the project.
