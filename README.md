@@ -1,5 +1,4 @@
-![Logo - SURE ProEd]([https://github.com/sure-trust/MANYAM-GEETHA-SREE-g5-gen-ai/blob/main/assets/logo.png?raw=true](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/assets/logo.png))
-
+![Planting](https://raw.githubusercontent.com/geethasree0713/SURETRUST-INTERNSHIP/main/suretrust/community-services/planting.png)
 # SURE ProEd (formerly SURE Trust)
 
 ## Skill Upgradation for Rural youth Empowerment Trust
