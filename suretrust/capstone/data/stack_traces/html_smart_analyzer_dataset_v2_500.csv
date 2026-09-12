@@ -1,0 +1,2601 @@
+s.no,language,error_type,code,stack_trace,fix_brief,fix_solution
+1,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_1"">
+    <p>Record item 1</p></span>
+</div>","Error: Stray end tag </span>.
+From line 95, column 15; to line 95, column 22
+item 1</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_1"">
+    <p>Record item 1</p>
+</div>"
+2,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_2.png"" class=""text-muted_2"">","Error: Element img is missing required attribute alt.
+From line 45, column 1; to line 45, column 29
+er_2.png"" class=""text-muted_2"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_2.png"" class=""text-muted_2"" alt=""Operational Banner Graph 2"">"
+3,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_3"">
+    <p id=""user_profile_3"">Duplicated UI Area 3</p>
+</div>","Error: Duplicate ID user_profile_3.
+From line 13, column 5; to line 13, column 18
+user_profile_3""><p id=""user_profile_3"">Dupli",Refactor element ID 'user_profile_3' to be structurally unique on each DOM element.,"<div id=""user_profile_3"">
+    <p id=""user_profile_3_text"">Duplicated UI Area 3</p>
+</div>"
+4,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 52, column 5; to line 52, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+5,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""shadow-lg_5"" class=""active"">","Error: Duplicate attribute class.
+From line 80, column 12; to line 80, column 26
+shadow-lg_5"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""shadow-lg_5 active"">"
+6,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 93, column 1; to line 93, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+7,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched shadow-lg_7 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched shadow-lg_7 tag</span>
+8,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+9,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 28, column 9; to line 28, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+10,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 13, column 16; to line 13, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+11,html,W3C Validator Error: Stray End Tag,"<div class=""text-muted_11"">
+    <p>Record item 11</p></span>
+</div>","Error: Stray end tag </span>.
+From line 66, column 18; to line 66, column 25
+item 11</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""text-muted_11"">
+    <p>Record item 11</p>
+</div>"
+12,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_12.png"" class=""container-fluid_12"">","Error: Element img is missing required attribute alt.
+From line 38, column 1; to line 38, column 19
+er_12.png"" class=""container-fluid_12"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_12.png"" class=""container-fluid_12"" alt=""Operational Banner Graph 12"">"
+13,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_13"">
+    <p id=""main_content_13"">Duplicated UI Area 13</p>
+</div>","Error: Duplicate ID main_content_13.
+From line 16, column 5; to line 16, column 45
+main_content_13""><p id=""main_content_13"">Dupli",Refactor element ID 'main_content_13' to be structurally unique on each DOM element.,"<div id=""main_content_13"">
+    <p id=""main_content_13_text"">Duplicated UI Area 13</p>
+</div>"
+14,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 89, column 5; to line 89, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+15,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""alert-danger_15"" class=""active"">","Error: Duplicate attribute class.
+From line 76, column 13; to line 76, column 27
+alert-danger_15"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""alert-danger_15 active"">"
+16,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 4, column 1; to line 4, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+17,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_17 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_17 tag</span>
+18,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+19,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 44, column 9; to line 44, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+20,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 12, column 16; to line 12, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+21,html,W3C Validator Error: Stray End Tag,"<div class=""container-fluid_21"">
+    <p>Record item 21</p></span>
+</div>","Error: Stray end tag </span>.
+From line 54, column 42; to line 54, column 49
+item 21</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""container-fluid_21"">
+    <p>Record item 21</p>
+</div>"
+22,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_22.png"" class=""text-muted_22"">","Error: Element img is missing required attribute alt.
+From line 73, column 1; to line 73, column 26
+er_22.png"" class=""text-muted_22"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_22.png"" class=""text-muted_22"" alt=""Operational Banner Graph 22"">"
+23,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_23"">
+    <p id=""main_content_23"">Duplicated UI Area 23</p>
+</div>","Error: Duplicate ID main_content_23.
+From line 38, column 5; to line 38, column 9
+main_content_23""><p id=""main_content_23"">Dupli",Refactor element ID 'main_content_23' to be structurally unique on each DOM element.,"<div id=""main_content_23"">
+    <p id=""main_content_23_text"">Duplicated UI Area 23</p>
+</div>"
+24,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 11, column 5; to line 11, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+25,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_25"" class=""active"">","Error: Duplicate attribute class.
+From line 73, column 8; to line 73, column 22
+text-muted_25"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_25 active"">"
+26,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 40, column 1; to line 40, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+27,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_27 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_27 tag</span>
+28,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+29,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 17, column 9; to line 17, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+30,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 88, column 16; to line 88, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+31,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_31"">
+    <p>Record item 31</p></span>
+</div>","Error: Stray end tag </span>.
+From line 82, column 31; to line 82, column 38
+item 31</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_31"">
+    <p>Record item 31</p>
+</div>"
+32,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_32.png"" class=""container-fluid_32"">","Error: Element img is missing required attribute alt.
+From line 18, column 1; to line 18, column 32
+er_32.png"" class=""container-fluid_32"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_32.png"" class=""container-fluid_32"" alt=""Operational Banner Graph 32"">"
+33,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_33"">
+    <p id=""main_content_33"">Duplicated UI Area 33</p>
+</div>","Error: Duplicate ID main_content_33.
+From line 6, column 5; to line 6, column 23
+main_content_33""><p id=""main_content_33"">Dupli",Refactor element ID 'main_content_33' to be structurally unique on each DOM element.,"<div id=""main_content_33"">
+    <p id=""main_content_33_text"">Duplicated UI Area 33</p>
+</div>"
+34,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 59, column 5; to line 59, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+35,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_35"" class=""active"">","Error: Duplicate attribute class.
+From line 77, column 17; to line 77, column 31
+card-body_35"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_35 active"">"
+36,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 58, column 1; to line 58, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+37,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_37 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_37 tag</span>
+38,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+39,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 80, column 9; to line 80, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+40,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 80, column 16; to line 80, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+41,html,W3C Validator Error: Stray End Tag,"<div class=""flex-row_41"">
+    <p>Record item 41</p></span>
+</div>","Error: Stray end tag </span>.
+From line 88, column 7; to line 88, column 14
+item 41</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""flex-row_41"">
+    <p>Record item 41</p>
+</div>"
+42,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_42.png"" class=""shadow-lg_42"">","Error: Element img is missing required attribute alt.
+From line 38, column 1; to line 38, column 24
+er_42.png"" class=""shadow-lg_42"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_42.png"" class=""shadow-lg_42"" alt=""Operational Banner Graph 42"">"
+43,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_43"">
+    <p id=""user_profile_43"">Duplicated UI Area 43</p>
+</div>","Error: Duplicate ID user_profile_43.
+From line 42, column 5; to line 42, column 33
+user_profile_43""><p id=""user_profile_43"">Dupli",Refactor element ID 'user_profile_43' to be structurally unique on each DOM element.,"<div id=""user_profile_43"">
+    <p id=""user_profile_43_text"">Duplicated UI Area 43</p>
+</div>"
+44,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 387, column 5; to line 387, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+45,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""container-fluid_45"" class=""active"">","Error: Duplicate attribute class.
+From line 71, column 32; to line 71, column 46
+container-fluid_45"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""container-fluid_45 active"">"
+46,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 8, column 1; to line 8, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+47,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_47 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_47 tag</span>
+48,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+49,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 18, column 9; to line 18, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+50,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 342, column 16; to line 342, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+51,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_51"">
+    <p>Record item 51</p></span>
+</div>","Error: Stray end tag </span>.
+From line 75, column 5; to line 75, column 12
+item 51</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_51"">
+    <p>Record item 51</p>
+</div>"
+52,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_52.png"" class=""text-muted_52"">","Error: Element img is missing required attribute alt.
+From line 78, column 1; to line 78, column 25
+er_52.png"" class=""text-muted_52"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_52.png"" class=""text-muted_52"" alt=""Operational Banner Graph 52"">"
+53,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_53"">
+    <p id=""sidebar_menu_53"">Duplicated UI Area 53</p>
+</div>","Error: Duplicate ID sidebar_menu_53.
+From line 31, column 5; to line 31, column 37
+sidebar_menu_53""><p id=""sidebar_menu_53"">Dupli",Refactor element ID 'sidebar_menu_53' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_53"">
+    <p id=""sidebar_menu_53_text"">Duplicated UI Area 53</p>
+</div>"
+54,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 25, column 5; to line 25, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+55,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_55"" class=""active"">","Error: Duplicate attribute class.
+From line 70, column 11; to line 70, column 25
+card-body_55"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_55 active"">"
+56,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 96, column 1; to line 96, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+57,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_57 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_57 tag</span>
+58,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+59,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 94, column 9; to line 94, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+60,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 15, column 16; to line 15, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+61,html,W3C Validator Error: Stray End Tag,"<div class=""text-muted_61"">
+    <p>Record item 61</p></span>
+</div>","Error: Stray end tag </span>.
+From line 48, column 45; to line 48, column 52
+item 61</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""text-muted_61"">
+    <p>Record item 61</p>
+</div>"
+62,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_62.png"" class=""container-fluid_62"">","Error: Element img is missing required attribute alt.
+From line 54, column 1; to line 54, column 23
+er_62.png"" class=""container-fluid_62"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_62.png"" class=""container-fluid_62"" alt=""Operational Banner Graph 62"">"
+63,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""search_input_63"">
+    <p id=""search_input_63"">Duplicated UI Area 63</p>
+</div>","Error: Duplicate ID search_input_63.
+From line 50, column 5; to line 50, column 36
+search_input_63""><p id=""search_input_63"">Dupli",Refactor element ID 'search_input_63' to be structurally unique on each DOM element.,"<div id=""search_input_63"">
+    <p id=""search_input_63_text"">Duplicated UI Area 63</p>
+</div>"
+64,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 25, column 5; to line 25, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+65,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_65"" class=""active"">","Error: Duplicate attribute class.
+From line 15, column 14; to line 15, column 28
+card-body_65"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_65 active"">"
+66,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 43, column 1; to line 43, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+67,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_67 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_67 tag</span>
+68,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+69,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 20, column 9; to line 20, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+70,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 4, column 16; to line 4, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+71,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_71"">
+    <p>Record item 71</p></span>
+</div>","Error: Stray end tag </span>.
+From line 46, column 28; to line 46, column 35
+item 71</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_71"">
+    <p>Record item 71</p>
+</div>"
+72,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_72.png"" class=""shadow-lg_72"">","Error: Element img is missing required attribute alt.
+From line 95, column 1; to line 95, column 35
+er_72.png"" class=""shadow-lg_72"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_72.png"" class=""shadow-lg_72"" alt=""Operational Banner Graph 72"">"
+73,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_73"">
+    <p id=""main_content_73"">Duplicated UI Area 73</p>
+</div>","Error: Duplicate ID main_content_73.
+From line 2, column 5; to line 2, column 27
+main_content_73""><p id=""main_content_73"">Dupli",Refactor element ID 'main_content_73' to be structurally unique on each DOM element.,"<div id=""main_content_73"">
+    <p id=""main_content_73_text"">Duplicated UI Area 73</p>
+</div>"
+74,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 40, column 5; to line 40, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+75,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""container-fluid_75"" class=""active"">","Error: Duplicate attribute class.
+From line 32, column 33; to line 32, column 47
+container-fluid_75"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""container-fluid_75 active"">"
+76,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 84, column 1; to line 84, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+77,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_77 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_77 tag</span>
+78,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+79,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 94, column 9; to line 94, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+80,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 65, column 16; to line 65, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+81,html,W3C Validator Error: Stray End Tag,"<div class=""text-muted_81"">
+    <p>Record item 81</p></span>
+</div>","Error: Stray end tag </span>.
+From line 60, column 43; to line 60, column 50
+item 81</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""text-muted_81"">
+    <p>Record item 81</p>
+</div>"
+82,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_82.png"" class=""flex-row_82"">","Error: Element img is missing required attribute alt.
+From line 77, column 1; to line 77, column 19
+er_82.png"" class=""flex-row_82"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_82.png"" class=""flex-row_82"" alt=""Operational Banner Graph 82"">"
+83,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_83"">
+    <p id=""submit_button_83"">Duplicated UI Area 83</p>
+</div>","Error: Duplicate ID submit_button_83.
+From line 69, column 5; to line 69, column 44
+submit_button_83""><p id=""submit_button_83"">Dupli",Refactor element ID 'submit_button_83' to be structurally unique on each DOM element.,"<div id=""submit_button_83"">
+    <p id=""submit_button_83_text"">Duplicated UI Area 83</p>
+</div>"
+84,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 40, column 5; to line 40, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+85,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_85"" class=""active"">","Error: Duplicate attribute class.
+From line 29, column 34; to line 29, column 48
+card-body_85"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_85 active"">"
+86,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 53, column 1; to line 53, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+87,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched text-muted_87 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched text-muted_87 tag</span>
+88,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+89,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 33, column 9; to line 33, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+90,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 8, column 16; to line 8, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+91,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_91"">
+    <p>Record item 91</p></span>
+</div>","Error: Stray end tag </span>.
+From line 50, column 32; to line 50, column 39
+item 91</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_91"">
+    <p>Record item 91</p>
+</div>"
+92,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_92.png"" class=""btn-submit_92"">","Error: Element img is missing required attribute alt.
+From line 44, column 1; to line 44, column 10
+er_92.png"" class=""btn-submit_92"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_92.png"" class=""btn-submit_92"" alt=""Operational Banner Graph 92"">"
+93,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_93"">
+    <p id=""user_profile_93"">Duplicated UI Area 93</p>
+</div>","Error: Duplicate ID user_profile_93.
+From line 33, column 5; to line 33, column 44
+user_profile_93""><p id=""user_profile_93"">Dupli",Refactor element ID 'user_profile_93' to be structurally unique on each DOM element.,"<div id=""user_profile_93"">
+    <p id=""user_profile_93_text"">Duplicated UI Area 93</p>
+</div>"
+94,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 48, column 5; to line 48, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+95,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""container-fluid_95"" class=""active"">","Error: Duplicate attribute class.
+From line 6, column 41; to line 6, column 55
+container-fluid_95"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""container-fluid_95 active"">"
+96,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 25, column 1; to line 25, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+97,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_97 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_97 tag</span>
+98,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+99,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 31, column 9; to line 31, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+100,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 60, column 16; to line 60, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+101,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_101"">
+    <p>Record item 101</p></span>
+</div>","Error: Stray end tag </span>.
+From line 34, column 24; to line 34, column 31
+item 101</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_101"">
+    <p>Record item 101</p>
+</div>"
+102,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_102.png"" class=""shadow-lg_102"">","Error: Element img is missing required attribute alt.
+From line 70, column 1; to line 70, column 35
+er_102.png"" class=""shadow-lg_102"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_102.png"" class=""shadow-lg_102"" alt=""Operational Banner Graph 102"">"
+103,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_103"">
+    <p id=""user_profile_103"">Duplicated UI Area 103</p>
+</div>","Error: Duplicate ID user_profile_103.
+From line 15, column 5; to line 15, column 30
+user_profile_103""><p id=""user_profile_103"">Dupli",Refactor element ID 'user_profile_103' to be structurally unique on each DOM element.,"<div id=""user_profile_103"">
+    <p id=""user_profile_103_text"">Duplicated UI Area 103</p>
+</div>"
+104,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 91, column 5; to line 91, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+105,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_105"" class=""active"">","Error: Duplicate attribute class.
+From line 55, column 35; to line 55, column 49
+flex-row_105"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_105 active"">"
+106,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 73, column 1; to line 73, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+107,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched shadow-lg_107 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched shadow-lg_107 tag</span>
+108,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+109,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 95, column 9; to line 95, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+110,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 48, column 16; to line 48, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+111,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_111"">
+    <p>Record item 111</p></span>
+</div>","Error: Stray end tag </span>.
+From line 47, column 22; to line 47, column 29
+item 111</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_111"">
+    <p>Record item 111</p>
+</div>"
+112,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_112.png"" class=""shadow-lg_112"">","Error: Element img is missing required attribute alt.
+From line 78, column 1; to line 78, column 33
+er_112.png"" class=""shadow-lg_112"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_112.png"" class=""shadow-lg_112"" alt=""Operational Banner Graph 112"">"
+113,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_113"">
+    <p id=""user_profile_113"">Duplicated UI Area 113</p>
+</div>","Error: Duplicate ID user_profile_113.
+From line 91, column 5; to line 91, column 26
+user_profile_113""><p id=""user_profile_113"">Dupli",Refactor element ID 'user_profile_113' to be structurally unique on each DOM element.,"<div id=""user_profile_113"">
+    <p id=""user_profile_113_text"">Duplicated UI Area 113</p>
+</div>"
+114,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 89, column 5; to line 89, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+115,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_115"" class=""active"">","Error: Duplicate attribute class.
+From line 89, column 10; to line 89, column 24
+btn-submit_115"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_115 active"">"
+116,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 22, column 1; to line 22, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+117,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_117 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_117 tag</span>
+118,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+119,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 27, column 9; to line 27, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+120,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 89, column 16; to line 89, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+121,html,W3C Validator Error: Stray End Tag,"<div class=""flex-row_121"">
+    <p>Record item 121</p></span>
+</div>","Error: Stray end tag </span>.
+From line 40, column 45; to line 40, column 52
+item 121</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""flex-row_121"">
+    <p>Record item 121</p>
+</div>"
+122,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_122.png"" class=""card-body_122"">","Error: Element img is missing required attribute alt.
+From line 48, column 1; to line 48, column 39
+er_122.png"" class=""card-body_122"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_122.png"" class=""card-body_122"" alt=""Operational Banner Graph 122"">"
+123,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_123"">
+    <p id=""sidebar_menu_123"">Duplicated UI Area 123</p>
+</div>","Error: Duplicate ID sidebar_menu_123.
+From line 69, column 5; to line 69, column 39
+sidebar_menu_123""><p id=""sidebar_menu_123"">Dupli",Refactor element ID 'sidebar_menu_123' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_123"">
+    <p id=""sidebar_menu_123_text"">Duplicated UI Area 123</p>
+</div>"
+124,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 22, column 5; to line 22, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+125,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_125"" class=""active"">","Error: Duplicate attribute class.
+From line 19, column 38; to line 19, column 52
+text-muted_125"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_125 active"">"
+126,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 16, column 1; to line 16, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+127,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_127 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_127 tag</span>
+128,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+129,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 5, column 9; to line 5, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+130,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 56, column 16; to line 56, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+131,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_131"">
+    <p>Record item 131</p></span>
+</div>","Error: Stray end tag </span>.
+From line 51, column 32; to line 51, column 39
+item 131</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_131"">
+    <p>Record item 131</p>
+</div>"
+132,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_132.png"" class=""btn-submit_132"">","Error: Element img is missing required attribute alt.
+From line 6, column 1; to line 6, column 18
+er_132.png"" class=""btn-submit_132"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_132.png"" class=""btn-submit_132"" alt=""Operational Banner Graph 132"">"
+133,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""search_input_133"">
+    <p id=""search_input_133"">Duplicated UI Area 133</p>
+</div>","Error: Duplicate ID search_input_133.
+From line 54, column 5; to line 54, column 12
+search_input_133""><p id=""search_input_133"">Dupli",Refactor element ID 'search_input_133' to be structurally unique on each DOM element.,"<div id=""search_input_133"">
+    <p id=""search_input_133_text"">Duplicated UI Area 133</p>
+</div>"
+134,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 12, column 5; to line 12, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+135,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_135"" class=""active"">","Error: Duplicate attribute class.
+From line 55, column 10; to line 55, column 24
+card-body_135"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_135 active"">"
+136,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 74, column 1; to line 74, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+137,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_137 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_137 tag</span>
+138,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+139,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 61, column 9; to line 61, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+140,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 80, column 16; to line 80, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+141,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_141"">
+    <p>Record item 141</p></span>
+</div>","Error: Stray end tag </span>.
+From line 17, column 37; to line 17, column 44
+item 141</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_141"">
+    <p>Record item 141</p>
+</div>"
+142,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_142.png"" class=""shadow-lg_142"">","Error: Element img is missing required attribute alt.
+From line 83, column 1; to line 83, column 41
+er_142.png"" class=""shadow-lg_142"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_142.png"" class=""shadow-lg_142"" alt=""Operational Banner Graph 142"">"
+143,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_143"">
+    <p id=""user_profile_143"">Duplicated UI Area 143</p>
+</div>","Error: Duplicate ID user_profile_143.
+From line 3, column 5; to line 3, column 17
+user_profile_143""><p id=""user_profile_143"">Dupli",Refactor element ID 'user_profile_143' to be structurally unique on each DOM element.,"<div id=""user_profile_143"">
+    <p id=""user_profile_143_text"">Duplicated UI Area 143</p>
+</div>"
+144,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 29, column 5; to line 29, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+145,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_145"" class=""active"">","Error: Duplicate attribute class.
+From line 68, column 36; to line 68, column 50
+btn-submit_145"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_145 active"">"
+146,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 51, column 1; to line 51, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+147,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_147 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_147 tag</span>
+148,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+149,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 4, column 9; to line 4, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+150,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 210, column 16; to line 210, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+151,html,W3C Validator Error: Stray End Tag,"<div class=""text-muted_151"">
+    <p>Record item 151</p></span>
+</div>","Error: Stray end tag </span>.
+From line 88, column 18; to line 88, column 25
+item 151</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""text-muted_151"">
+    <p>Record item 151</p>
+</div>"
+152,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_152.png"" class=""btn-submit_152"">","Error: Element img is missing required attribute alt.
+From line 77, column 1; to line 77, column 45
+er_152.png"" class=""btn-submit_152"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_152.png"" class=""btn-submit_152"" alt=""Operational Banner Graph 152"">"
+153,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_153"">
+    <p id=""user_profile_153"">Duplicated UI Area 153</p>
+</div>","Error: Duplicate ID user_profile_153.
+From line 48, column 5; to line 48, column 30
+user_profile_153""><p id=""user_profile_153"">Dupli",Refactor element ID 'user_profile_153' to be structurally unique on each DOM element.,"<div id=""user_profile_153"">
+    <p id=""user_profile_153_text"">Duplicated UI Area 153</p>
+</div>"
+154,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 66, column 5; to line 66, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+155,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_155"" class=""active"">","Error: Duplicate attribute class.
+From line 27, column 19; to line 27, column 33
+flex-row_155"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_155 active"">"
+156,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 95, column 1; to line 95, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+157,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_157 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_157 tag</span>
+158,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+159,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 23, column 9; to line 23, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+160,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 408, column 16; to line 408, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+161,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_161"">
+    <p>Record item 161</p></span>
+</div>","Error: Stray end tag </span>.
+From line 52, column 43; to line 52, column 50
+item 161</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_161"">
+    <p>Record item 161</p>
+</div>"
+162,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_162.png"" class=""alert-danger_162"">","Error: Element img is missing required attribute alt.
+From line 31, column 1; to line 31, column 42
+er_162.png"" class=""alert-danger_162"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_162.png"" class=""alert-danger_162"" alt=""Operational Banner Graph 162"">"
+163,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_163"">
+    <p id=""submit_button_163"">Duplicated UI Area 163</p>
+</div>","Error: Duplicate ID submit_button_163.
+From line 93, column 5; to line 93, column 13
+submit_button_163""><p id=""submit_button_163"">Dupli",Refactor element ID 'submit_button_163' to be structurally unique on each DOM element.,"<div id=""submit_button_163"">
+    <p id=""submit_button_163_text"">Duplicated UI Area 163</p>
+</div>"
+164,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 93, column 5; to line 93, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+165,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_165"" class=""active"">","Error: Duplicate attribute class.
+From line 15, column 16; to line 15, column 30
+text-muted_165"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_165 active"">"
+166,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 23, column 1; to line 23, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+167,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_167 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_167 tag</span>
+168,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+169,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 47, column 9; to line 47, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+170,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 12, column 16; to line 12, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+171,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_171"">
+    <p>Record item 171</p></span>
+</div>","Error: Stray end tag </span>.
+From line 72, column 30; to line 72, column 37
+item 171</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_171"">
+    <p>Record item 171</p>
+</div>"
+172,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_172.png"" class=""text-muted_172"">","Error: Element img is missing required attribute alt.
+From line 22, column 1; to line 22, column 40
+er_172.png"" class=""text-muted_172"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_172.png"" class=""text-muted_172"" alt=""Operational Banner Graph 172"">"
+173,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_173"">
+    <p id=""sidebar_menu_173"">Duplicated UI Area 173</p>
+</div>","Error: Duplicate ID sidebar_menu_173.
+From line 47, column 5; to line 47, column 8
+sidebar_menu_173""><p id=""sidebar_menu_173"">Dupli",Refactor element ID 'sidebar_menu_173' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_173"">
+    <p id=""sidebar_menu_173_text"">Duplicated UI Area 173</p>
+</div>"
+174,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 12, column 5; to line 12, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+175,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_175"" class=""active"">","Error: Duplicate attribute class.
+From line 91, column 29; to line 91, column 43
+card-body_175"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_175 active"">"
+176,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 48, column 1; to line 48, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+177,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched shadow-lg_177 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched shadow-lg_177 tag</span>
+178,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+179,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 96, column 9; to line 96, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+180,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 364, column 16; to line 364, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+181,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_181"">
+    <p>Record item 181</p></span>
+</div>","Error: Stray end tag </span>.
+From line 90, column 28; to line 90, column 35
+item 181</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_181"">
+    <p>Record item 181</p>
+</div>"
+182,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_182.png"" class=""container-fluid_182"">","Error: Element img is missing required attribute alt.
+From line 35, column 1; to line 35, column 9
+er_182.png"" class=""container-fluid_182"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_182.png"" class=""container-fluid_182"" alt=""Operational Banner Graph 182"">"
+183,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_183"">
+    <p id=""user_profile_183"">Duplicated UI Area 183</p>
+</div>","Error: Duplicate ID user_profile_183.
+From line 55, column 5; to line 55, column 18
+user_profile_183""><p id=""user_profile_183"">Dupli",Refactor element ID 'user_profile_183' to be structurally unique on each DOM element.,"<div id=""user_profile_183"">
+    <p id=""user_profile_183_text"">Duplicated UI Area 183</p>
+</div>"
+184,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 77, column 5; to line 77, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+185,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""alert-danger_185"" class=""active"">","Error: Duplicate attribute class.
+From line 86, column 45; to line 86, column 59
+alert-danger_185"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""alert-danger_185 active"">"
+186,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 27, column 1; to line 27, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+187,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_187 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_187 tag</span>
+188,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+189,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 90, column 9; to line 90, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+190,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 87, column 16; to line 87, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+191,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_191"">
+    <p>Record item 191</p></span>
+</div>","Error: Stray end tag </span>.
+From line 44, column 12; to line 44, column 19
+item 191</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_191"">
+    <p>Record item 191</p>
+</div>"
+192,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_192.png"" class=""text-muted_192"">","Error: Element img is missing required attribute alt.
+From line 67, column 1; to line 67, column 10
+er_192.png"" class=""text-muted_192"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_192.png"" class=""text-muted_192"" alt=""Operational Banner Graph 192"">"
+193,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_193"">
+    <p id=""sidebar_menu_193"">Duplicated UI Area 193</p>
+</div>","Error: Duplicate ID sidebar_menu_193.
+From line 37, column 5; to line 37, column 17
+sidebar_menu_193""><p id=""sidebar_menu_193"">Dupli",Refactor element ID 'sidebar_menu_193' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_193"">
+    <p id=""sidebar_menu_193_text"">Duplicated UI Area 193</p>
+</div>"
+194,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 9, column 5; to line 9, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+195,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_195"" class=""active"">","Error: Duplicate attribute class.
+From line 52, column 19; to line 52, column 33
+flex-row_195"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_195 active"">"
+196,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 22, column 1; to line 22, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+197,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_197 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_197 tag</span>
+198,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+199,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 89, column 9; to line 89, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+200,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 60, column 16; to line 60, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+201,html,W3C Validator Error: Stray End Tag,"<div class=""container-fluid_201"">
+    <p>Record item 201</p></span>
+</div>","Error: Stray end tag </span>.
+From line 87, column 44; to line 87, column 51
+item 201</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""container-fluid_201"">
+    <p>Record item 201</p>
+</div>"
+202,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_202.png"" class=""flex-row_202"">","Error: Element img is missing required attribute alt.
+From line 3, column 1; to line 3, column 6
+er_202.png"" class=""flex-row_202"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_202.png"" class=""flex-row_202"" alt=""Operational Banner Graph 202"">"
+203,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_203"">
+    <p id=""user_profile_203"">Duplicated UI Area 203</p>
+</div>","Error: Duplicate ID user_profile_203.
+From line 51, column 5; to line 51, column 30
+user_profile_203""><p id=""user_profile_203"">Dupli",Refactor element ID 'user_profile_203' to be structurally unique on each DOM element.,"<div id=""user_profile_203"">
+    <p id=""user_profile_203_text"">Duplicated UI Area 203</p>
+</div>"
+204,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 11, column 5; to line 11, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+205,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_205"" class=""active"">","Error: Duplicate attribute class.
+From line 90, column 28; to line 90, column 42
+card-body_205"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_205 active"">"
+206,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 45, column 1; to line 45, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+207,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_207 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_207 tag</span>
+208,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+209,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 24, column 9; to line 24, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+210,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 85, column 16; to line 85, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+211,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_211"">
+    <p>Record item 211</p></span>
+</div>","Error: Stray end tag </span>.
+From line 7, column 10; to line 7, column 17
+item 211</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_211"">
+    <p>Record item 211</p>
+</div>"
+212,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_212.png"" class=""alert-danger_212"">","Error: Element img is missing required attribute alt.
+From line 32, column 1; to line 32, column 18
+er_212.png"" class=""alert-danger_212"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_212.png"" class=""alert-danger_212"" alt=""Operational Banner Graph 212"">"
+213,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""modal_box_213"">
+    <p id=""modal_box_213"">Duplicated UI Area 213</p>
+</div>","Error: Duplicate ID modal_box_213.
+From line 48, column 5; to line 48, column 13
+modal_box_213""><p id=""modal_box_213"">Dupli",Refactor element ID 'modal_box_213' to be structurally unique on each DOM element.,"<div id=""modal_box_213"">
+    <p id=""modal_box_213_text"">Duplicated UI Area 213</p>
+</div>"
+214,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 88, column 5; to line 88, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+215,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_215"" class=""active"">","Error: Duplicate attribute class.
+From line 16, column 34; to line 16, column 48
+card-body_215"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_215 active"">"
+216,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 26, column 1; to line 26, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+217,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_217 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_217 tag</span>
+218,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+219,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 93, column 9; to line 93, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+220,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 66, column 16; to line 66, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+221,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_221"">
+    <p>Record item 221</p></span>
+</div>","Error: Stray end tag </span>.
+From line 6, column 41; to line 6, column 48
+item 221</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_221"">
+    <p>Record item 221</p>
+</div>"
+222,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_222.png"" class=""text-muted_222"">","Error: Element img is missing required attribute alt.
+From line 49, column 1; to line 49, column 31
+er_222.png"" class=""text-muted_222"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_222.png"" class=""text-muted_222"" alt=""Operational Banner Graph 222"">"
+223,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""search_input_223"">
+    <p id=""search_input_223"">Duplicated UI Area 223</p>
+</div>","Error: Duplicate ID search_input_223.
+From line 13, column 5; to line 13, column 41
+search_input_223""><p id=""search_input_223"">Dupli",Refactor element ID 'search_input_223' to be structurally unique on each DOM element.,"<div id=""search_input_223"">
+    <p id=""search_input_223_text"">Duplicated UI Area 223</p>
+</div>"
+224,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 409, column 5; to line 409, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+225,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_225"" class=""active"">","Error: Duplicate attribute class.
+From line 75, column 24; to line 75, column 38
+btn-submit_225"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_225 active"">"
+226,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 19, column 1; to line 19, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+227,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched flex-row_227 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched flex-row_227 tag</span>
+228,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+229,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 59, column 9; to line 59, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+230,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 40, column 16; to line 40, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+231,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_231"">
+    <p>Record item 231</p></span>
+</div>","Error: Stray end tag </span>.
+From line 38, column 5; to line 38, column 12
+item 231</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_231"">
+    <p>Record item 231</p>
+</div>"
+232,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_232.png"" class=""btn-submit_232"">","Error: Element img is missing required attribute alt.
+From line 6, column 1; to line 6, column 43
+er_232.png"" class=""btn-submit_232"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_232.png"" class=""btn-submit_232"" alt=""Operational Banner Graph 232"">"
+233,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_233"">
+    <p id=""submit_button_233"">Duplicated UI Area 233</p>
+</div>","Error: Duplicate ID submit_button_233.
+From line 10, column 5; to line 10, column 42
+submit_button_233""><p id=""submit_button_233"">Dupli",Refactor element ID 'submit_button_233' to be structurally unique on each DOM element.,"<div id=""submit_button_233"">
+    <p id=""submit_button_233_text"">Duplicated UI Area 233</p>
+</div>"
+234,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 59, column 5; to line 59, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+235,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_235"" class=""active"">","Error: Duplicate attribute class.
+From line 9, column 39; to line 9, column 53
+btn-submit_235"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_235 active"">"
+236,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 92, column 1; to line 92, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+237,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_237 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_237 tag</span>
+238,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+239,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 65, column 9; to line 65, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+240,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 88, column 16; to line 88, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+241,html,W3C Validator Error: Stray End Tag,"<div class=""container-fluid_241"">
+    <p>Record item 241</p></span>
+</div>","Error: Stray end tag </span>.
+From line 17, column 44; to line 17, column 51
+item 241</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""container-fluid_241"">
+    <p>Record item 241</p>
+</div>"
+242,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_242.png"" class=""shadow-lg_242"">","Error: Element img is missing required attribute alt.
+From line 41, column 1; to line 41, column 41
+er_242.png"" class=""shadow-lg_242"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_242.png"" class=""shadow-lg_242"" alt=""Operational Banner Graph 242"">"
+243,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_243"">
+    <p id=""main_content_243"">Duplicated UI Area 243</p>
+</div>","Error: Duplicate ID main_content_243.
+From line 73, column 5; to line 73, column 31
+main_content_243""><p id=""main_content_243"">Dupli",Refactor element ID 'main_content_243' to be structurally unique on each DOM element.,"<div id=""main_content_243"">
+    <p id=""main_content_243_text"">Duplicated UI Area 243</p>
+</div>"
+244,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 61, column 5; to line 61, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+245,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_245"" class=""active"">","Error: Duplicate attribute class.
+From line 20, column 10; to line 20, column 24
+flex-row_245"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_245 active"">"
+246,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 31, column 1; to line 31, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+247,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_247 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_247 tag</span>
+248,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+249,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 39, column 9; to line 39, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+250,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 61, column 16; to line 61, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+251,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_251"">
+    <p>Record item 251</p></span>
+</div>","Error: Stray end tag </span>.
+From line 84, column 41; to line 84, column 48
+item 251</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_251"">
+    <p>Record item 251</p>
+</div>"
+252,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_252.png"" class=""btn-submit_252"">","Error: Element img is missing required attribute alt.
+From line 19, column 1; to line 19, column 9
+er_252.png"" class=""btn-submit_252"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_252.png"" class=""btn-submit_252"" alt=""Operational Banner Graph 252"">"
+253,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_253"">
+    <p id=""main_content_253"">Duplicated UI Area 253</p>
+</div>","Error: Duplicate ID main_content_253.
+From line 78, column 5; to line 78, column 44
+main_content_253""><p id=""main_content_253"">Dupli",Refactor element ID 'main_content_253' to be structurally unique on each DOM element.,"<div id=""main_content_253"">
+    <p id=""main_content_253_text"">Duplicated UI Area 253</p>
+</div>"
+254,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 94, column 5; to line 94, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+255,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_255"" class=""active"">","Error: Duplicate attribute class.
+From line 31, column 38; to line 31, column 52
+flex-row_255"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_255 active"">"
+256,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 11, column 1; to line 11, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+257,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched text-muted_257 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched text-muted_257 tag</span>
+258,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+259,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 70, column 9; to line 70, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+260,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 419, column 16; to line 419, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+261,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_261"">
+    <p>Record item 261</p></span>
+</div>","Error: Stray end tag </span>.
+From line 3, column 20; to line 3, column 27
+item 261</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_261"">
+    <p>Record item 261</p>
+</div>"
+262,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_262.png"" class=""alert-danger_262"">","Error: Element img is missing required attribute alt.
+From line 5, column 1; to line 5, column 14
+er_262.png"" class=""alert-danger_262"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_262.png"" class=""alert-danger_262"" alt=""Operational Banner Graph 262"">"
+263,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_263"">
+    <p id=""sidebar_menu_263"">Duplicated UI Area 263</p>
+</div>","Error: Duplicate ID sidebar_menu_263.
+From line 33, column 5; to line 33, column 28
+sidebar_menu_263""><p id=""sidebar_menu_263"">Dupli",Refactor element ID 'sidebar_menu_263' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_263"">
+    <p id=""sidebar_menu_263_text"">Duplicated UI Area 263</p>
+</div>"
+264,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 55, column 5; to line 55, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+265,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_265"" class=""active"">","Error: Duplicate attribute class.
+From line 91, column 8; to line 91, column 22
+flex-row_265"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_265 active"">"
+266,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 34, column 1; to line 34, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+267,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_267 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_267 tag</span>
+268,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+269,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 25, column 9; to line 25, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+270,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 9, column 16; to line 9, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+271,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_271"">
+    <p>Record item 271</p></span>
+</div>","Error: Stray end tag </span>.
+From line 19, column 45; to line 19, column 52
+item 271</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_271"">
+    <p>Record item 271</p>
+</div>"
+272,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_272.png"" class=""text-muted_272"">","Error: Element img is missing required attribute alt.
+From line 74, column 1; to line 74, column 37
+er_272.png"" class=""text-muted_272"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_272.png"" class=""text-muted_272"" alt=""Operational Banner Graph 272"">"
+273,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_273"">
+    <p id=""user_profile_273"">Duplicated UI Area 273</p>
+</div>","Error: Duplicate ID user_profile_273.
+From line 74, column 5; to line 74, column 28
+user_profile_273""><p id=""user_profile_273"">Dupli",Refactor element ID 'user_profile_273' to be structurally unique on each DOM element.,"<div id=""user_profile_273"">
+    <p id=""user_profile_273_text"">Duplicated UI Area 273</p>
+</div>"
+274,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 26, column 5; to line 26, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+275,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_275"" class=""active"">","Error: Duplicate attribute class.
+From line 73, column 31; to line 73, column 45
+text-muted_275"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_275 active"">"
+276,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 36, column 1; to line 36, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+277,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_277 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_277 tag</span>
+278,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+279,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 91, column 9; to line 91, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+280,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 287, column 16; to line 287, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+281,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_281"">
+    <p>Record item 281</p></span>
+</div>","Error: Stray end tag </span>.
+From line 69, column 18; to line 69, column 25
+item 281</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_281"">
+    <p>Record item 281</p>
+</div>"
+282,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_282.png"" class=""card-body_282"">","Error: Element img is missing required attribute alt.
+From line 12, column 1; to line 12, column 45
+er_282.png"" class=""card-body_282"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_282.png"" class=""card-body_282"" alt=""Operational Banner Graph 282"">"
+283,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_283"">
+    <p id=""sidebar_menu_283"">Duplicated UI Area 283</p>
+</div>","Error: Duplicate ID sidebar_menu_283.
+From line 36, column 5; to line 36, column 24
+sidebar_menu_283""><p id=""sidebar_menu_283"">Dupli",Refactor element ID 'sidebar_menu_283' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_283"">
+    <p id=""sidebar_menu_283_text"">Duplicated UI Area 283</p>
+</div>"
+284,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 68, column 5; to line 68, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+285,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""shadow-lg_285"" class=""active"">","Error: Duplicate attribute class.
+From line 51, column 6; to line 51, column 20
+shadow-lg_285"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""shadow-lg_285 active"">"
+286,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 74, column 1; to line 74, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+287,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_287 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_287 tag</span>
+288,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+289,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 92, column 9; to line 92, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+290,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 78, column 16; to line 78, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+291,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_291"">
+    <p>Record item 291</p></span>
+</div>","Error: Stray end tag </span>.
+From line 65, column 7; to line 65, column 14
+item 291</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_291"">
+    <p>Record item 291</p>
+</div>"
+292,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_292.png"" class=""shadow-lg_292"">","Error: Element img is missing required attribute alt.
+From line 91, column 1; to line 91, column 9
+er_292.png"" class=""shadow-lg_292"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_292.png"" class=""shadow-lg_292"" alt=""Operational Banner Graph 292"">"
+293,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_293"">
+    <p id=""main_content_293"">Duplicated UI Area 293</p>
+</div>","Error: Duplicate ID main_content_293.
+From line 55, column 5; to line 55, column 42
+main_content_293""><p id=""main_content_293"">Dupli",Refactor element ID 'main_content_293' to be structurally unique on each DOM element.,"<div id=""main_content_293"">
+    <p id=""main_content_293_text"">Duplicated UI Area 293</p>
+</div>"
+294,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 84, column 5; to line 84, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+295,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_295"" class=""active"">","Error: Duplicate attribute class.
+From line 87, column 43; to line 87, column 57
+flex-row_295"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_295 active"">"
+296,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 23, column 1; to line 23, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+297,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_297 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_297 tag</span>
+298,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+299,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 32, column 9; to line 32, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+300,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 63, column 16; to line 63, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+301,html,W3C Validator Error: Stray End Tag,"<div class=""flex-row_301"">
+    <p>Record item 301</p></span>
+</div>","Error: Stray end tag </span>.
+From line 48, column 18; to line 48, column 25
+item 301</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""flex-row_301"">
+    <p>Record item 301</p>
+</div>"
+302,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_302.png"" class=""alert-danger_302"">","Error: Element img is missing required attribute alt.
+From line 15, column 1; to line 15, column 29
+er_302.png"" class=""alert-danger_302"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_302.png"" class=""alert-danger_302"" alt=""Operational Banner Graph 302"">"
+303,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_303"">
+    <p id=""sidebar_menu_303"">Duplicated UI Area 303</p>
+</div>","Error: Duplicate ID sidebar_menu_303.
+From line 93, column 5; to line 93, column 28
+sidebar_menu_303""><p id=""sidebar_menu_303"">Dupli",Refactor element ID 'sidebar_menu_303' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_303"">
+    <p id=""sidebar_menu_303_text"">Duplicated UI Area 303</p>
+</div>"
+304,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 65, column 5; to line 65, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+305,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_305"" class=""active"">","Error: Duplicate attribute class.
+From line 24, column 36; to line 24, column 50
+flex-row_305"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_305 active"">"
+306,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 40, column 1; to line 40, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+307,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_307 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_307 tag</span>
+308,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+309,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 43, column 9; to line 43, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+310,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 57, column 16; to line 57, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+311,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_311"">
+    <p>Record item 311</p></span>
+</div>","Error: Stray end tag </span>.
+From line 71, column 44; to line 71, column 51
+item 311</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_311"">
+    <p>Record item 311</p>
+</div>"
+312,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_312.png"" class=""container-fluid_312"">","Error: Element img is missing required attribute alt.
+From line 55, column 1; to line 55, column 17
+er_312.png"" class=""container-fluid_312"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_312.png"" class=""container-fluid_312"" alt=""Operational Banner Graph 312"">"
+313,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_313"">
+    <p id=""user_profile_313"">Duplicated UI Area 313</p>
+</div>","Error: Duplicate ID user_profile_313.
+From line 27, column 5; to line 27, column 16
+user_profile_313""><p id=""user_profile_313"">Dupli",Refactor element ID 'user_profile_313' to be structurally unique on each DOM element.,"<div id=""user_profile_313"">
+    <p id=""user_profile_313_text"">Duplicated UI Area 313</p>
+</div>"
+314,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 95, column 5; to line 95, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+315,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""container-fluid_315"" class=""active"">","Error: Duplicate attribute class.
+From line 76, column 42; to line 76, column 56
+container-fluid_315"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""container-fluid_315 active"">"
+316,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 16, column 1; to line 16, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+317,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched shadow-lg_317 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched shadow-lg_317 tag</span>
+318,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+319,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 16, column 9; to line 16, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+320,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 78, column 16; to line 78, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+321,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_321"">
+    <p>Record item 321</p></span>
+</div>","Error: Stray end tag </span>.
+From line 80, column 42; to line 80, column 49
+item 321</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_321"">
+    <p>Record item 321</p>
+</div>"
+322,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_322.png"" class=""shadow-lg_322"">","Error: Element img is missing required attribute alt.
+From line 32, column 1; to line 32, column 26
+er_322.png"" class=""shadow-lg_322"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_322.png"" class=""shadow-lg_322"" alt=""Operational Banner Graph 322"">"
+323,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_323"">
+    <p id=""main_content_323"">Duplicated UI Area 323</p>
+</div>","Error: Duplicate ID main_content_323.
+From line 92, column 5; to line 92, column 41
+main_content_323""><p id=""main_content_323"">Dupli",Refactor element ID 'main_content_323' to be structurally unique on each DOM element.,"<div id=""main_content_323"">
+    <p id=""main_content_323_text"">Duplicated UI Area 323</p>
+</div>"
+324,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 387, column 5; to line 387, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+325,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_325"" class=""active"">","Error: Duplicate attribute class.
+From line 49, column 8; to line 49, column 22
+text-muted_325"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_325 active"">"
+326,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 68, column 1; to line 68, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+327,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_327 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_327 tag</span>
+328,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+329,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 89, column 9; to line 89, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+330,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 8, column 16; to line 8, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+331,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_331"">
+    <p>Record item 331</p></span>
+</div>","Error: Stray end tag </span>.
+From line 81, column 21; to line 81, column 28
+item 331</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_331"">
+    <p>Record item 331</p>
+</div>"
+332,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_332.png"" class=""card-body_332"">","Error: Element img is missing required attribute alt.
+From line 83, column 1; to line 83, column 7
+er_332.png"" class=""card-body_332"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_332.png"" class=""card-body_332"" alt=""Operational Banner Graph 332"">"
+333,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_333"">
+    <p id=""submit_button_333"">Duplicated UI Area 333</p>
+</div>","Error: Duplicate ID submit_button_333.
+From line 82, column 5; to line 82, column 45
+submit_button_333""><p id=""submit_button_333"">Dupli",Refactor element ID 'submit_button_333' to be structurally unique on each DOM element.,"<div id=""submit_button_333"">
+    <p id=""submit_button_333_text"">Duplicated UI Area 333</p>
+</div>"
+334,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 48, column 5; to line 48, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+335,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""alert-danger_335"" class=""active"">","Error: Duplicate attribute class.
+From line 26, column 11; to line 26, column 25
+alert-danger_335"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""alert-danger_335 active"">"
+336,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 37, column 1; to line 37, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+337,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched text-muted_337 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched text-muted_337 tag</span>
+338,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+339,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 40, column 9; to line 40, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+340,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 10, column 16; to line 10, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+341,html,W3C Validator Error: Stray End Tag,"<div class=""flex-row_341"">
+    <p>Record item 341</p></span>
+</div>","Error: Stray end tag </span>.
+From line 60, column 12; to line 60, column 19
+item 341</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""flex-row_341"">
+    <p>Record item 341</p>
+</div>"
+342,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_342.png"" class=""card-body_342"">","Error: Element img is missing required attribute alt.
+From line 54, column 1; to line 54, column 7
+er_342.png"" class=""card-body_342"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_342.png"" class=""card-body_342"" alt=""Operational Banner Graph 342"">"
+343,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_343"">
+    <p id=""user_profile_343"">Duplicated UI Area 343</p>
+</div>","Error: Duplicate ID user_profile_343.
+From line 75, column 5; to line 75, column 22
+user_profile_343""><p id=""user_profile_343"">Dupli",Refactor element ID 'user_profile_343' to be structurally unique on each DOM element.,"<div id=""user_profile_343"">
+    <p id=""user_profile_343_text"">Duplicated UI Area 343</p>
+</div>"
+344,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 44, column 5; to line 44, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+345,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""shadow-lg_345"" class=""active"">","Error: Duplicate attribute class.
+From line 18, column 12; to line 18, column 26
+shadow-lg_345"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""shadow-lg_345 active"">"
+346,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 84, column 1; to line 84, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+347,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_347 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_347 tag</span>
+348,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+349,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 29, column 9; to line 29, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+350,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 6, column 16; to line 6, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+351,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_351"">
+    <p>Record item 351</p></span>
+</div>","Error: Stray end tag </span>.
+From line 30, column 32; to line 30, column 39
+item 351</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_351"">
+    <p>Record item 351</p>
+</div>"
+352,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_352.png"" class=""text-muted_352"">","Error: Element img is missing required attribute alt.
+From line 92, column 1; to line 92, column 6
+er_352.png"" class=""text-muted_352"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_352.png"" class=""text-muted_352"" alt=""Operational Banner Graph 352"">"
+353,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_353"">
+    <p id=""submit_button_353"">Duplicated UI Area 353</p>
+</div>","Error: Duplicate ID submit_button_353.
+From line 62, column 5; to line 62, column 30
+submit_button_353""><p id=""submit_button_353"">Dupli",Refactor element ID 'submit_button_353' to be structurally unique on each DOM element.,"<div id=""submit_button_353"">
+    <p id=""submit_button_353_text"">Duplicated UI Area 353</p>
+</div>"
+354,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 95, column 5; to line 95, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+355,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_355"" class=""active"">","Error: Duplicate attribute class.
+From line 18, column 31; to line 18, column 45
+card-body_355"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_355 active"">"
+356,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 18, column 1; to line 18, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+357,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_357 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_357 tag</span>
+358,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+359,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 89, column 9; to line 89, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+360,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 71, column 16; to line 71, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+361,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_361"">
+    <p>Record item 361</p></span>
+</div>","Error: Stray end tag </span>.
+From line 18, column 20; to line 18, column 27
+item 361</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_361"">
+    <p>Record item 361</p>
+</div>"
+362,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_362.png"" class=""flex-row_362"">","Error: Element img is missing required attribute alt.
+From line 86, column 1; to line 86, column 39
+er_362.png"" class=""flex-row_362"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_362.png"" class=""flex-row_362"" alt=""Operational Banner Graph 362"">"
+363,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_363"">
+    <p id=""submit_button_363"">Duplicated UI Area 363</p>
+</div>","Error: Duplicate ID submit_button_363.
+From line 91, column 5; to line 91, column 14
+submit_button_363""><p id=""submit_button_363"">Dupli",Refactor element ID 'submit_button_363' to be structurally unique on each DOM element.,"<div id=""submit_button_363"">
+    <p id=""submit_button_363_text"">Duplicated UI Area 363</p>
+</div>"
+364,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 16, column 5; to line 16, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+365,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""alert-danger_365"" class=""active"">","Error: Duplicate attribute class.
+From line 77, column 15; to line 77, column 29
+alert-danger_365"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""alert-danger_365 active"">"
+366,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 74, column 1; to line 74, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+367,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_367 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_367 tag</span>
+368,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+369,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 33, column 9; to line 33, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+370,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 50, column 16; to line 50, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+371,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_371"">
+    <p>Record item 371</p></span>
+</div>","Error: Stray end tag </span>.
+From line 39, column 29; to line 39, column 36
+item 371</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_371"">
+    <p>Record item 371</p>
+</div>"
+372,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_372.png"" class=""flex-row_372"">","Error: Element img is missing required attribute alt.
+From line 29, column 1; to line 29, column 6
+er_372.png"" class=""flex-row_372"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_372.png"" class=""flex-row_372"" alt=""Operational Banner Graph 372"">"
+373,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_373"">
+    <p id=""submit_button_373"">Duplicated UI Area 373</p>
+</div>","Error: Duplicate ID submit_button_373.
+From line 62, column 5; to line 62, column 42
+submit_button_373""><p id=""submit_button_373"">Dupli",Refactor element ID 'submit_button_373' to be structurally unique on each DOM element.,"<div id=""submit_button_373"">
+    <p id=""submit_button_373_text"">Duplicated UI Area 373</p>
+</div>"
+374,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 15, column 5; to line 15, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+375,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_375"" class=""active"">","Error: Duplicate attribute class.
+From line 45, column 38; to line 45, column 52
+btn-submit_375"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_375 active"">"
+376,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 57, column 1; to line 57, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+377,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_377 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_377 tag</span>
+378,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+379,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 39, column 9; to line 39, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+380,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 4, column 16; to line 4, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+381,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_381"">
+    <p>Record item 381</p></span>
+</div>","Error: Stray end tag </span>.
+From line 32, column 43; to line 32, column 50
+item 381</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_381"">
+    <p>Record item 381</p>
+</div>"
+382,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_382.png"" class=""btn-submit_382"">","Error: Element img is missing required attribute alt.
+From line 57, column 1; to line 57, column 40
+er_382.png"" class=""btn-submit_382"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_382.png"" class=""btn-submit_382"" alt=""Operational Banner Graph 382"">"
+383,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_383"">
+    <p id=""sidebar_menu_383"">Duplicated UI Area 383</p>
+</div>","Error: Duplicate ID sidebar_menu_383.
+From line 65, column 5; to line 65, column 42
+sidebar_menu_383""><p id=""sidebar_menu_383"">Dupli",Refactor element ID 'sidebar_menu_383' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_383"">
+    <p id=""sidebar_menu_383_text"">Duplicated UI Area 383</p>
+</div>"
+384,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 60, column 5; to line 60, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+385,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""shadow-lg_385"" class=""active"">","Error: Duplicate attribute class.
+From line 82, column 44; to line 82, column 58
+shadow-lg_385"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""shadow-lg_385 active"">"
+386,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 25, column 1; to line 25, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+387,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_387 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_387 tag</span>
+388,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+389,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 47, column 9; to line 47, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+390,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 92, column 16; to line 92, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+391,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_391"">
+    <p>Record item 391</p></span>
+</div>","Error: Stray end tag </span>.
+From line 21, column 28; to line 21, column 35
+item 391</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_391"">
+    <p>Record item 391</p>
+</div>"
+392,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_392.png"" class=""shadow-lg_392"">","Error: Element img is missing required attribute alt.
+From line 93, column 1; to line 93, column 45
+er_392.png"" class=""shadow-lg_392"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_392.png"" class=""shadow-lg_392"" alt=""Operational Banner Graph 392"">"
+393,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""search_input_393"">
+    <p id=""search_input_393"">Duplicated UI Area 393</p>
+</div>","Error: Duplicate ID search_input_393.
+From line 29, column 5; to line 29, column 21
+search_input_393""><p id=""search_input_393"">Dupli",Refactor element ID 'search_input_393' to be structurally unique on each DOM element.,"<div id=""search_input_393"">
+    <p id=""search_input_393_text"">Duplicated UI Area 393</p>
+</div>"
+394,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 17, column 5; to line 17, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+395,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_395"" class=""active"">","Error: Duplicate attribute class.
+From line 92, column 14; to line 92, column 28
+btn-submit_395"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_395 active"">"
+396,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 26, column 1; to line 26, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+397,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_397 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_397 tag</span>
+398,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+399,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 51, column 9; to line 51, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+400,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 89, column 16; to line 89, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+401,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_401"">
+    <p>Record item 401</p></span>
+</div>","Error: Stray end tag </span>.
+From line 65, column 18; to line 65, column 25
+item 401</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_401"">
+    <p>Record item 401</p>
+</div>"
+402,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_402.png"" class=""shadow-lg_402"">","Error: Element img is missing required attribute alt.
+From line 42, column 1; to line 42, column 15
+er_402.png"" class=""shadow-lg_402"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_402.png"" class=""shadow-lg_402"" alt=""Operational Banner Graph 402"">"
+403,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_403"">
+    <p id=""user_profile_403"">Duplicated UI Area 403</p>
+</div>","Error: Duplicate ID user_profile_403.
+From line 43, column 5; to line 43, column 12
+user_profile_403""><p id=""user_profile_403"">Dupli",Refactor element ID 'user_profile_403' to be structurally unique on each DOM element.,"<div id=""user_profile_403"">
+    <p id=""user_profile_403_text"">Duplicated UI Area 403</p>
+</div>"
+404,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 7, column 5; to line 7, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+405,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_405"" class=""active"">","Error: Duplicate attribute class.
+From line 50, column 26; to line 50, column 40
+flex-row_405"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_405 active"">"
+406,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 44, column 1; to line 44, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+407,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched shadow-lg_407 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched shadow-lg_407 tag</span>
+408,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+409,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 41, column 9; to line 41, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+410,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 41, column 16; to line 41, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+411,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_411"">
+    <p>Record item 411</p></span>
+</div>","Error: Stray end tag </span>.
+From line 26, column 16; to line 26, column 23
+item 411</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_411"">
+    <p>Record item 411</p>
+</div>"
+412,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_412.png"" class=""flex-row_412"">","Error: Element img is missing required attribute alt.
+From line 31, column 1; to line 31, column 31
+er_412.png"" class=""flex-row_412"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_412.png"" class=""flex-row_412"" alt=""Operational Banner Graph 412"">"
+413,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""nav_header_413"">
+    <p id=""nav_header_413"">Duplicated UI Area 413</p>
+</div>","Error: Duplicate ID nav_header_413.
+From line 71, column 5; to line 71, column 45
+nav_header_413""><p id=""nav_header_413"">Dupli",Refactor element ID 'nav_header_413' to be structurally unique on each DOM element.,"<div id=""nav_header_413"">
+    <p id=""nav_header_413_text"">Duplicated UI Area 413</p>
+</div>"
+414,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 24, column 5; to line 24, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+415,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_415"" class=""active"">","Error: Duplicate attribute class.
+From line 35, column 43; to line 35, column 57
+card-body_415"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_415 active"">"
+416,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 68, column 1; to line 68, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+417,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_417 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_417 tag</span>
+418,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+419,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 93, column 9; to line 93, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+420,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 342, column 16; to line 342, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+421,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_421"">
+    <p>Record item 421</p></span>
+</div>","Error: Stray end tag </span>.
+From line 92, column 37; to line 92, column 44
+item 421</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_421"">
+    <p>Record item 421</p>
+</div>"
+422,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_422.png"" class=""alert-danger_422"">","Error: Element img is missing required attribute alt.
+From line 54, column 1; to line 54, column 17
+er_422.png"" class=""alert-danger_422"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_422.png"" class=""alert-danger_422"" alt=""Operational Banner Graph 422"">"
+423,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""search_input_423"">
+    <p id=""search_input_423"">Duplicated UI Area 423</p>
+</div>","Error: Duplicate ID search_input_423.
+From line 24, column 5; to line 24, column 34
+search_input_423""><p id=""search_input_423"">Dupli",Refactor element ID 'search_input_423' to be structurally unique on each DOM element.,"<div id=""search_input_423"">
+    <p id=""search_input_423_text"">Duplicated UI Area 423</p>
+</div>"
+424,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 67, column 5; to line 67, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+425,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_425"" class=""active"">","Error: Duplicate attribute class.
+From line 63, column 7; to line 63, column 21
+btn-submit_425"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_425 active"">"
+426,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 58, column 1; to line 58, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+427,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched alert-danger_427 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched alert-danger_427 tag</span>
+428,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+429,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 53, column 9; to line 53, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+430,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 16, column 16; to line 16, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+431,html,W3C Validator Error: Stray End Tag,"<div class=""shadow-lg_431"">
+    <p>Record item 431</p></span>
+</div>","Error: Stray end tag </span>.
+From line 64, column 26; to line 64, column 33
+item 431</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""shadow-lg_431"">
+    <p>Record item 431</p>
+</div>"
+432,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_432.png"" class=""container-fluid_432"">","Error: Element img is missing required attribute alt.
+From line 94, column 1; to line 94, column 40
+er_432.png"" class=""container-fluid_432"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_432.png"" class=""container-fluid_432"" alt=""Operational Banner Graph 432"">"
+433,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_433"">
+    <p id=""submit_button_433"">Duplicated UI Area 433</p>
+</div>","Error: Duplicate ID submit_button_433.
+From line 50, column 5; to line 50, column 30
+submit_button_433""><p id=""submit_button_433"">Dupli",Refactor element ID 'submit_button_433' to be structurally unique on each DOM element.,"<div id=""submit_button_433"">
+    <p id=""submit_button_433_text"">Duplicated UI Area 433</p>
+</div>"
+434,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 92, column 5; to line 92, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+435,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""flex-row_435"" class=""active"">","Error: Duplicate attribute class.
+From line 86, column 11; to line 86, column 25
+flex-row_435"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""flex-row_435 active"">"
+436,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 77, column 1; to line 77, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+437,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched text-muted_437 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched text-muted_437 tag</span>
+438,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+439,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 44, column 9; to line 44, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+440,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 52, column 16; to line 52, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+441,html,W3C Validator Error: Stray End Tag,"<div class=""container-fluid_441"">
+    <p>Record item 441</p></span>
+</div>","Error: Stray end tag </span>.
+From line 94, column 12; to line 94, column 19
+item 441</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""container-fluid_441"">
+    <p>Record item 441</p>
+</div>"
+442,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_442.png"" class=""shadow-lg_442"">","Error: Element img is missing required attribute alt.
+From line 75, column 1; to line 75, column 37
+er_442.png"" class=""shadow-lg_442"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_442.png"" class=""shadow-lg_442"" alt=""Operational Banner Graph 442"">"
+443,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""sidebar_menu_443"">
+    <p id=""sidebar_menu_443"">Duplicated UI Area 443</p>
+</div>","Error: Duplicate ID sidebar_menu_443.
+From line 31, column 5; to line 31, column 43
+sidebar_menu_443""><p id=""sidebar_menu_443"">Dupli",Refactor element ID 'sidebar_menu_443' to be structurally unique on each DOM element.,"<div id=""sidebar_menu_443"">
+    <p id=""sidebar_menu_443_text"">Duplicated UI Area 443</p>
+</div>"
+444,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 85, column 5; to line 85, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+445,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_445"" class=""active"">","Error: Duplicate attribute class.
+From line 71, column 40; to line 71, column 54
+text-muted_445"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_445 active"">"
+446,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 78, column 1; to line 78, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+447,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched card-body_447 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched card-body_447 tag</span>
+448,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+449,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 67, column 9; to line 67, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+450,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 254, column 16; to line 254, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+451,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_451"">
+    <p>Record item 451</p></span>
+</div>","Error: Stray end tag </span>.
+From line 95, column 37; to line 95, column 44
+item 451</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_451"">
+    <p>Record item 451</p>
+</div>"
+452,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_452.png"" class=""card-body_452"">","Error: Element img is missing required attribute alt.
+From line 82, column 1; to line 82, column 23
+er_452.png"" class=""card-body_452"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_452.png"" class=""card-body_452"" alt=""Operational Banner Graph 452"">"
+453,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""user_profile_453"">
+    <p id=""user_profile_453"">Duplicated UI Area 453</p>
+</div>","Error: Duplicate ID user_profile_453.
+From line 95, column 5; to line 95, column 16
+user_profile_453""><p id=""user_profile_453"">Dupli",Refactor element ID 'user_profile_453' to be structurally unique on each DOM element.,"<div id=""user_profile_453"">
+    <p id=""user_profile_453_text"">Duplicated UI Area 453</p>
+</div>"
+454,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 58, column 5; to line 58, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+455,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""text-muted_455"" class=""active"">","Error: Duplicate attribute class.
+From line 43, column 20; to line 43, column 34
+text-muted_455"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""text-muted_455 active"">"
+456,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 20, column 1; to line 20, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+457,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_457 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_457 tag</span>
+458,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+459,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 13, column 9; to line 13, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+460,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 4, column 16; to line 4, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+461,html,W3C Validator Error: Stray End Tag,"<div class=""alert-danger_461"">
+    <p>Record item 461</p></span>
+</div>","Error: Stray end tag </span>.
+From line 47, column 39; to line 47, column 46
+item 461</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""alert-danger_461"">
+    <p>Record item 461</p>
+</div>"
+462,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_462.png"" class=""container-fluid_462"">","Error: Element img is missing required attribute alt.
+From line 33, column 1; to line 33, column 31
+er_462.png"" class=""container-fluid_462"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_462.png"" class=""container-fluid_462"" alt=""Operational Banner Graph 462"">"
+463,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""nav_header_463"">
+    <p id=""nav_header_463"">Duplicated UI Area 463</p>
+</div>","Error: Duplicate ID nav_header_463.
+From line 72, column 5; to line 72, column 45
+nav_header_463""><p id=""nav_header_463"">Dupli",Refactor element ID 'nav_header_463' to be structurally unique on each DOM element.,"<div id=""nav_header_463"">
+    <p id=""nav_header_463_text"">Duplicated UI Area 463</p>
+</div>"
+464,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 73, column 5; to line 73, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+465,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""card-body_465"" class=""active"">","Error: Duplicate attribute class.
+From line 40, column 11; to line 40, column 25
+card-body_465"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""card-body_465 active"">"
+466,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 63, column 1; to line 63, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+467,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_467 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_467 tag</span>
+468,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+469,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 10, column 9; to line 10, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+470,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 14, column 16; to line 14, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+471,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_471"">
+    <p>Record item 471</p></span>
+</div>","Error: Stray end tag </span>.
+From line 51, column 37; to line 51, column 44
+item 471</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_471"">
+    <p>Record item 471</p>
+</div>"
+472,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_472.png"" class=""container-fluid_472"">","Error: Element img is missing required attribute alt.
+From line 84, column 1; to line 84, column 9
+er_472.png"" class=""container-fluid_472"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_472.png"" class=""container-fluid_472"" alt=""Operational Banner Graph 472"">"
+473,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""main_content_473"">
+    <p id=""main_content_473"">Duplicated UI Area 473</p>
+</div>","Error: Duplicate ID main_content_473.
+From line 41, column 5; to line 41, column 8
+main_content_473""><p id=""main_content_473"">Dupli",Refactor element ID 'main_content_473' to be structurally unique on each DOM element.,"<div id=""main_content_473"">
+    <p id=""main_content_473_text"">Duplicated UI Area 473</p>
+</div>"
+474,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 69, column 5; to line 69, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+475,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_475"" class=""active"">","Error: Duplicate attribute class.
+From line 57, column 35; to line 57, column 49
+btn-submit_475"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_475 active"">"
+476,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 75, column 1; to line 75, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+477,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched btn-submit_477 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched btn-submit_477 tag</span>
+478,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+479,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 15, column 9; to line 15, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+480,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 13, column 16; to line 13, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+481,html,W3C Validator Error: Stray End Tag,"<div class=""btn-submit_481"">
+    <p>Record item 481</p></span>
+</div>","Error: Stray end tag </span>.
+From line 90, column 32; to line 90, column 39
+item 481</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""btn-submit_481"">
+    <p>Record item 481</p>
+</div>"
+482,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_482.png"" class=""text-muted_482"">","Error: Element img is missing required attribute alt.
+From line 92, column 1; to line 92, column 5
+er_482.png"" class=""text-muted_482"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_482.png"" class=""text-muted_482"" alt=""Operational Banner Graph 482"">"
+483,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""submit_button_483"">
+    <p id=""submit_button_483"">Duplicated UI Area 483</p>
+</div>","Error: Duplicate ID submit_button_483.
+From line 2, column 5; to line 2, column 42
+submit_button_483""><p id=""submit_button_483"">Dupli",Refactor element ID 'submit_button_483' to be structurally unique on each DOM element.,"<div id=""submit_button_483"">
+    <p id=""submit_button_483_text"">Duplicated UI Area 483</p>
+</div>"
+484,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 13, column 5; to line 13, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+485,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""btn-submit_485"" class=""active"">","Error: Duplicate attribute class.
+From line 64, column 17; to line 64, column 31
+btn-submit_485"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""btn-submit_485 active"">"
+486,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 61, column 1; to line 61, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+487,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched container-fluid_487 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched container-fluid_487 tag</span>
+488,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+489,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 10, column 9; to line 10, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+490,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 265, column 16; to line 265, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>
+491,html,W3C Validator Error: Stray End Tag,"<div class=""card-body_491"">
+    <p>Record item 491</p></span>
+</div>","Error: Stray end tag </span>.
+From line 9, column 29; to line 9, column 36
+item 491</p></span>\n</di",Delete the redundant stray </span> closing tag.,"<div class=""card-body_491"">
+    <p>Record item 491</p>
+</div>"
+492,html,W3C Validator Error: Missing Required Attribute,"<img src=""/assets/banner_492.png"" class=""container-fluid_492"">","Error: Element img is missing required attribute alt.
+From line 3, column 1; to line 3, column 24
+er_492.png"" class=""container-fluid_492"">\n</bo",Add an 'alt' attribute describing the graphic for Web Accessibility (A11Y).,"<img src=""/assets/banner_492.png"" class=""container-fluid_492"" alt=""Operational Banner Graph 492"">"
+493,html,W3C Validator Error: Duplicate ID Attribute,"<div id=""search_input_493"">
+    <p id=""search_input_493"">Duplicated UI Area 493</p>
+</div>","Error: Duplicate ID search_input_493.
+From line 70, column 5; to line 70, column 11
+search_input_493""><p id=""search_input_493"">Dupli",Refactor element ID 'search_input_493' to be structurally unique on each DOM element.,"<div id=""search_input_493"">
+    <p id=""search_input_493_text"">Duplicated UI Area 493</p>
+</div>"
+494,html,W3C Validator Error: Element Not Allowed Here,"<ul>
+    <div>List element can only contain li.</div>
+</ul>","Error: Element div not allowed as child of element ul in this context.
+From line 67, column 5; to line 67, column 10
+ <ul>\n    <div>List ",Wrap the child content of a <ul> block inside a valid <li> element instead of a <div>.,"<ul>
+    <li>List element can only contain li.</li>
+</ul>"
+495,html,W3C Validator Error: Duplicate Attribute,"<input type=""text"" class=""container-fluid_495"" class=""active"">","Error: Duplicate attribute class.
+From line 31, column 25; to line 31, column 39
+container-fluid_495"" class=""active"">",Combine separate CSS class references into a single attribute separated by spaces.,"<input type=""text"" class=""container-fluid_495 active"">"
+496,html,W3C Validator Error: End Tag Seen With Unclosed Elements,"<div>
+    <strong>Unclosed emphasis tag
+</div>","Error: End tag div seen, but there were unclosed elements.
+From line 96, column 1; to line 96, column 7
+sis tag\n</div>",Explicitly close the <strong> tag before closing the parent <div> element.,"<div>
+    <strong>Unclosed emphasis tag</strong>
+</div>"
+497,html,HTMLHint Error: Tag Pair Mismatch,<span>Mismatched shadow-lg_497 tag</div>,"Error: Tag must be paired, no matching end tag: [ <span> ] matched with [ </div> ]
+Line 1: <span>Mismatched container tag</div>",Correct the closing tag to match the opening element type (</span>).,<span>Mismatched shadow-lg_497 tag</span>
+498,html,HTMLHint Error: Attribute Value Unclosed,"<a href=""/dashboard>Dashboard</a>","Error: Attribute value must be closed with matching quotation mark.
+Line 1: <a href=""/dashboard>Dashboard</a>",Add the missing closing double quotation mark to seal the href attribute.,"<a href=""/dashboard"">Dashboard</a>"
+499,html,W3C Validator Error: Table Child Nesting Violation,"<table>
+    <tr>
+        <div>Invalid element outside td</div>
+    </tr>
+</table>","Error: Element div not allowed as child of element tr in this context.
+From line 94, column 9; to line 94, column 14
+   <tr>\n        <div>Inval",Place structural table contents inside table cell elements (<td>) instead of direct children of a row (<tr>).,"<table>
+    <tr>
+        <td><div>Invalid element outside td</div></td>
+    </tr>
+</table>"
+500,html,W3C Validator Error: Unescaped Special Character Entity,<p>User age is < 18 & has no permission.</p>,"Error: Unescaped '&' or '<' detected. Use character entity equivalents like '&amp;' or '&lt;'.
+From line 5, column 16; to line 5, column 17
+age is < 18 ",Escape the raw '<' and '&' character symbols inside text nodes into proper HTML entities.,<p>User age is &lt; 18 &amp; has no permission.</p>

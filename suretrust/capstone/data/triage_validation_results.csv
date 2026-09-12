@@ -1,0 +1,31 @@
+title,actual,predicted,exact,distance
+Add Mockito and AssertJ in target platform,Critical,Low,False,3
+Migrate current users to sj0[2-4] nodes,Medium,Medium,True,0
+Can you move plug-in org.eclipse.hyades.logging.adapter.model into feature org.eclipse.hyades.logging?,Medium,Medium,True,0
+Change of outline near left edge of block causes the whole block to be invalidated,Medium,Medium,True,0
+netui TreeItem tag no longer output sthe id lookup scripts when script container removed,High,Medium,False,1
+No way to specify remote to push,Medium,Medium,True,0
+No way to search for private comments,High,Medium,False,1
+SWTException: Invalid thread access on disconnect of a connection with ssh shell,Low,Critical,False,3
+Locationmap view does not display locationmap,High,Medium,False,1
+chatzilla shouldn't open a window until the server sends a JOIN,Medium,Medium,True,0
+Access Error trying to access vpg when creating a conflict error message in AddOnlyToUseStatementRefactoring,Medium,Critical,False,2
+Derby UI and Help Plug-in documentation for the Derby Web Site,Low,Low,True,0
+"v2.6 always tell me ""Could not connect to the socket for URL 'http://www.w3.org/2001/xml.xsd'"" when I wanna parse a xml file with target namespace.",Critical,Critical,True,0
+Avoid revalidating the whole cached chain for new cert KU and EKU,Medium,Medium,True,0
+The System menu has no accelerators,Medium,Medium,True,0
+[FIX]Docshell doesn't need an nsIScriptContext pointer,Medium,Low,False,1
+[altss] Style sheet selector does not display No Theme for pages without a base stylesheet (but shows Basic Theme),Low,Medium,False,1
+Making CElementLabels visible and none dependent of Search,Medium,Medium,True,0
+False values on the y-axis on Windows,Medium,Medium,True,0
+std::numeric_limits ::traps = false when integer arithmetic traps,Low,Critical,False,3
+sv-se should be used as language string for Swedish (Sweden),Medium,Low,False,1
+missing metadata errors on the console,Critical,Medium,False,2
+Trusted add-ons don't appear in the updated list,Medium,Medium,True,0
+Cannot execute workflows defined with expanded BPEL designer,Medium,Medium,True,0
+Dynamic printf does not work reliably when symbols have different scopes.,Medium,Medium,True,0
+finish not enabled in report as bug wizard,Medium,Medium,True,0
+Unnecessary separator between browse and delete buttons,Medium,Medium,True,0
+TreeHtmlAttributeInfo should have a constructor that takes attribute and value,Low,Medium,False,1
+gfxXlibNativeRenderer::DRAW_SUPPORTS_NONDEFAULT_VISUAL should be distinct from DRAW_SUPPORTS_CLIP_LIST,Medium,Medium,True,0
+No tinderbox/latest-mozilla1.8-l10n/ for Firefox and Thunderbird,Medium,Medium,True,0

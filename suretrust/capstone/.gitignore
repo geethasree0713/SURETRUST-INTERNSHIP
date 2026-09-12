@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+.env
+
+# Data (optional - depends if you want raw data tracked)
+data/raw/*
+!data/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+# Large generated embeddings (regenerate from notebook, don't commit)
+src/embeddings.npy
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Duplicate/backup notebook
+notebooks/01_dataset_collection-Copy1.ipynb
+
+# Old duplicate vectorizer (canonical copy lives in src/)
+notebooks/vectorizer.pkl

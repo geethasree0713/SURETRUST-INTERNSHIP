@@ -1,0 +1,56 @@
+language,actual_error_type,predicted_error_type,confidence,exact_match,fair_match,fair_match_v2,fair_match_v3
+cpp,g++ Compiler Error: Template Mismatch,No Matching Member Function,0.95,False,False,False,False
+cpp,std::bad_alloc Exception,std::bad_alloc,0.95,False,True,False,True
+cpp,g++ Compiler Warning: Safe Comparison Mismatch (Signed/Unsigned),Comparison of Signed Expressions of Different Signedness,0.95,False,False,False,False
+cpp,g++ Compiler Error: No Matching Constructor,No Matching Constructor,0.95,False,True,True,True
+cpp,g++ Compiler Warning: Safe Comparison Mismatch (Signed/Unsigned),Comparison of Integer Expressions of Different Signedness,0.95,False,False,False,False
+css,PostCSS Parser Error: Unclosed Block,Unclosed Block,0.95,False,True,True,True
+css,Stylelint Error: Invalid Hex Color,Unexpected invalid hex color,0.95,False,False,True,True
+css,Stylelint Error: Duplicate Property,"Unexpected duplicate ""display"" property",0.95,False,False,True,True
+css,Sass Compiler Error: Malformed calc(),Expected Expression,0.95,False,False,False,False
+css,Stylelint Error: Duplicate Property,"Unexpected duplicate ""display"" property",0.95,False,False,True,True
+c,GCC Compiler Error: Syntax Error,Expected Semicolon,0.95,False,False,False,False
+c,GCC Compiler Error: Dereferencing Void Pointer,Dereferencing Void Pointer,0.95,False,True,True,True
+c,GCC Compiler Error: Incompatible Pointer Type,Initialization of Pointer with Incompatible Type,0.95,False,False,True,True
+c,GCC Compiler Warning: Format Mismatch,Format Specifier Mismatch,0.95,False,False,True,True
+c,GCC Compiler Error: Incompatible Pointer Type,Dereferencing Void Pointer,0.95,False,False,False,True
+go,Go Runtime Panic: Index Out of Range,Index Out of Range,0.95,False,True,True,True
+go,Go Compiler Error: Unused Variable,Unused Variable Declaration,0.95,False,False,True,True
+go,Go Compiler Error: Unused Import,Unused Import,0.95,False,True,True,True
+go,Go Runtime Panic: Interface Conversion Mismatch (Type Assertion),"interface conversion: interface {} is string, not int",0.95,False,False,True,False
+go,Go Compiler Error: Unused Import,Unused Import,0.95,False,True,True,True
+html,W3C Validator Error: Missing Required Attribute,Element img is missing required attribute alt.,0.95,False,False,True,True
+html,W3C Validator Error: Element Not Allowed Here,Element Not Allowed As Child,0.95,False,False,True,True
+html,W3C Validator Error: Duplicate Attribute,Duplicate attribute class,0.95,False,False,True,True
+html,W3C Validator Error: End Tag Seen With Unclosed Elements,Unclosed Element,0.95,False,True,True,True
+html,W3C Validator Error: Duplicate Attribute,Duplicate Attribute,0.95,False,True,True,True
+java,Java Runtime Exception: NullPointerException,NullPointerException,0.99,False,True,False,True
+java,Java Compiler Error: Incompatible Types,Incompatible Types,0.95,False,True,True,True
+java,Java Runtime Exception: ClassCastException,ClassCastException,0.99,False,True,False,True
+java,Java Compiler Error: Missing Return Statement,Missing Return Statement,0.99,False,True,True,True
+java,Java Runtime Exception: ClassCastException,ClassCastException,0.99,False,True,False,True
+javascript,TypeError,TypeError,0.99,True,True,False,True
+javascript,TypeError,TypeError,0.99,True,True,False,True
+javascript,SyntaxError,Unexpected End of Input (SyntaxError),0.95,False,True,False,True
+javascript,TypeError,Assignment to Constant Variable,0.99,False,False,False,False
+javascript,TypeError,TypeError: Cannot read properties of null,0.99,False,True,False,True
+php,PHP Fatal Error: Call to Undefined Function,Call to undefined function,0.95,False,True,True,True
+php,PHP TypeError,TypeError,0.99,False,True,False,True
+php,PHP ArgumentCountError,ArgumentCountError,0.99,False,True,False,True
+php,PHP Notice: Undefined Variable,Undefined Variable,0.95,False,True,True,True
+php,PHP ArgumentCountError,ArgumentCountError,0.99,False,True,False,True
+python,PermissionError,PermissionError,0.95,True,True,False,True
+python,AttributeError,AttributeError: 'str' object has no attribute 'get_size',0.95,False,True,False,True
+python,ValueError,ValueError: could not convert string to float,0.95,False,True,False,True
+python,IsADirectoryError,IsADirectoryError,0.95,True,True,False,True
+python,RecursionError,RecursionError,0.99,True,True,False,True
+rust,Rust Compiler Error: E0502 (Borrow Checker Violation),Unknown,0.0,False,False,False,False
+rust,Rust Compiler Error: E0308 (Mismatched Types),Mismatched Types,0.95,False,True,True,True
+rust,Rust Runtime Panic: Index Out of Bounds,Index Out of Bounds,0.95,False,True,True,True
+rust,Rust Compiler Error: E0596 (Cannot Borrow as Mutables),Cannot Borrow as Mutable,0.99,False,True,True,True
+rust,Rust Runtime Panic: Index Out of Bounds,Index Out of Bounds,0.99,False,True,True,True
+typescript,TypeScript Error: TS2339 (Property Does Not Exist),TS2339: Property 'value' does not exist on type 'object'.,0.95,False,False,True,True
+typescript,TypeScript Error: TS2564 (Uninitialized Property),Property Has No Initializer and Is Not Definitely Assigned,0.95,False,False,False,False
+typescript,TypeScript Error: TS2531 (Object is Possibly Null),TS2531: Object is possibly 'null',0.95,False,False,True,True
+typescript,TypeScript Error: TS2307 (Cannot Find Module),Unknown,0.0,False,False,False,False
+typescript,TypeScript Error: TS2531 (Object is Possibly Null),TS2531: Object is possibly 'null',0.95,False,False,True,True

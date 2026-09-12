@@ -1,0 +1,4251 @@
+s.no,language,error_type,code,stack_trace,fix_brief,fix_solution
+1,css,Stylelint Error: Unknown Property,"nav .item-link_1 {
+    margin-bot: 1px;
+    display: block;
+}","main_1.scss
+ 91:11  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_1 {
+    margin-bottom: 1px;
+    display: block;
+}"
+2,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_2 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_2 {","CssSyntaxError: grid_2.css:20:1: Unclosed block
+  18 |     background: #000;
+  19 |     opacity: 0.9;
+> 20 | 
+    | ^
+  21 | .element-sibling_2 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_2' before defining succeeding elements.,".modal-overlay_2 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_2 {"
+3,css,Sass Compiler Error: Missing Semicolon,".btn-action_3 {
+    border-radius: 3px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+84 │     border-radius: 3px
+  │                    ^
+  ╵
+  navigation_3.css 84:33  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".btn-action_3 {
+    border-radius: 3px;
+    overflow: hidden;
+}"
+4,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_4.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+5,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_5.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+6,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_6.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+7,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_7:hovr {
+    opacity: 0.8;
+}","mixins_7.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_7:hover {
+    opacity: 0.8;
+}"
+8,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_8.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+9,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+10,css,Stylelint Error: CSS Variable Misuse,"#user-profile-card_10 {
+    padding: var(--custom-prop-10);
+}","main_10.scss
+ 74:25  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-10').,"#user-profile-card_10 {
+    padding: var(----custom-prop-10);
+}"
+11,css,Stylelint Error: Unknown Property,".tooltip::after_11 {
+    margin-bot: 11px;
+    display: block;
+}","main_11.scss
+ 56:25  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".tooltip::after_11 {
+    margin-bottom: 11px;
+    display: block;
+}"
+12,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_12 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_12 {","CssSyntaxError: variables_12.scss:90:1: Unclosed block
+  88 |     background: #000;
+  89 |     opacity: 0.9;
+> 90 | 
+    | ^
+  91 | .element-sibling_12 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_12' before defining succeeding elements.,".modal-overlay_12 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_12 {"
+13,css,Sass Compiler Error: Missing Semicolon,".tooltip::after_13 {
+    border-radius: 13px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+62 │     border-radius: 13px
+  │                    ^
+  ╵
+  variables_13.scss 62:41  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".tooltip::after_13 {
+    border-radius: 13px;
+    overflow: hidden;
+}"
+14,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_14.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+15,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_15.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+16,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  app_16.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+17,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_17:hovr {
+    opacity: 0.8;
+}","grid_17.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_17:hover {
+    opacity: 0.8;
+}"
+18,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_18.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+19,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+20,css,Stylelint Error: CSS Variable Misuse,".grid-container_20 {
+    padding: var(--custom-prop-20);
+}","mixins_20.scss
+ 2:40  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-20').,".grid-container_20 {
+    padding: var(----custom-prop-20);
+}"
+21,css,Stylelint Error: Unknown Property,"main > section_21 {
+    margin-bot: 21px;
+    display: block;
+}","grid_21.css
+ 32:15  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"main > section_21 {
+    margin-bottom: 21px;
+    display: block;
+}"
+22,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_22 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_22 {","CssSyntaxError: main_22.scss:2:1: Unclosed block
+  0 |     background: #000;
+  1 |     opacity: 0.9;
+> 2 | 
+    | ^
+  3 | .element-sibling_22 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_22' before defining succeeding elements.,"@keyframes slide-in_22 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_22 {"
+23,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_23 {
+    border-radius: 23px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+74 │     border-radius: 23px
+  │                    ^
+  ╵
+  mixins_23.scss 74:24  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_23 {
+    border-radius: 23px;
+    overflow: hidden;
+}"
+24,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_24.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+25,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_25.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+26,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_26.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+27,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_27:hovr {
+    opacity: 0.8;
+}","theme_27.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_27:hover {
+    opacity: 0.8;
+}"
+28,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_28.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+29,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+30,css,Stylelint Error: CSS Variable Misuse,"main > section_30 {
+    padding: var(--custom-prop-30);
+}","app_30.css
+ 76:40  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-30').,"main > section_30 {
+    padding: var(----custom-prop-30);
+}"
+31,css,Stylelint Error: Unknown Property,".grid-container_31 {
+    margin-bot: 31px;
+    display: block;
+}","main_31.scss
+ 83:19  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".grid-container_31 {
+    margin-bottom: 31px;
+    display: block;
+}"
+32,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_32 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_32 {","CssSyntaxError: app_32.css:19:1: Unclosed block
+  17 |     background: #000;
+  18 |     opacity: 0.9;
+> 19 | 
+    | ^
+  20 | .element-sibling_32 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_32' before defining succeeding elements.,"@keyframes slide-in_32 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_32 {"
+33,css,Sass Compiler Error: Missing Semicolon,".grid-container_33 {
+    border-radius: 33px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+35 │     border-radius: 33px
+  │                    ^
+  ╵
+  app_33.css 35:31  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_33 {
+    border-radius: 33px;
+    overflow: hidden;
+}"
+34,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_34.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+35,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_35.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+36,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_36.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+37,css,Stylelint Warning: Unknown Pseudo-Class,"@keyframes slide-in_37:hovr {
+    opacity: 0.8;
+}","theme_37.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"@keyframes slide-in_37:hover {
+    opacity: 0.8;
+}"
+38,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_38.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+39,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+40,css,Stylelint Error: CSS Variable Misuse,".btn-action_40 {
+    padding: var(--custom-prop-40);
+}","theme_40.scss
+ 56:25  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-40').,".btn-action_40 {
+    padding: var(----custom-prop-40);
+}"
+41,css,Stylelint Error: Unknown Property,"nav .item-link_41 {
+    margin-bot: 41px;
+    display: block;
+}","grid_41.css
+ 4:9  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_41 {
+    margin-bottom: 41px;
+    display: block;
+}"
+42,css,PostCSS Parser Error: Unclosed Block,".tooltip::after_42 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_42 {","CssSyntaxError: main_42.scss:17:1: Unclosed block
+  15 |     background: #000;
+  16 |     opacity: 0.9;
+> 17 | 
+    | ^
+  18 | .element-sibling_42 {",Introduce a closing curly brace '}' to isolate ruleset '.tooltip::after_42' before defining succeeding elements.,".tooltip::after_42 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_42 {"
+43,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_43 {
+    border-radius: 43px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+78 │     border-radius: 43px
+  │                    ^
+  ╵
+  app_43.css 78:32  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_43 {
+    border-radius: 43px;
+    overflow: hidden;
+}"
+44,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","navigation_44.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+45,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_45.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+46,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_46.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+47,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_47:hovr {
+    opacity: 0.8;
+}","theme_47.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_47:hover {
+    opacity: 0.8;
+}"
+48,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_48.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+49,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+50,css,Stylelint Error: CSS Variable Misuse,"main > section_50 {
+    padding: var(--custom-prop-50);
+}","mixins_50.scss
+ 49:40  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-50').,"main > section_50 {
+    padding: var(----custom-prop-50);
+}"
+51,css,Stylelint Error: Unknown Property,"@keyframes slide-in_51 {
+    margin-bot: 51px;
+    display: block;
+}","main_51.scss
+ 69:16  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"@keyframes slide-in_51 {
+    margin-bottom: 51px;
+    display: block;
+}"
+52,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_52 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_52 {","CssSyntaxError: variables_52.scss:36:1: Unclosed block
+  34 |     background: #000;
+  35 |     opacity: 0.9;
+> 36 | 
+    | ^
+  37 | .element-sibling_52 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_52' before defining succeeding elements.,"@keyframes slide-in_52 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_52 {"
+53,css,Sass Compiler Error: Missing Semicolon,".modal-overlay_53 {
+    border-radius: 53px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+13 │     border-radius: 53px
+  │                    ^
+  ╵
+  app_53.css 13:31  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".modal-overlay_53 {
+    border-radius: 53px;
+    overflow: hidden;
+}"
+54,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","grid_54.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+55,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_55.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+56,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_56.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+57,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_57:hovr {
+    opacity: 0.8;
+}","app_57.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_57:hover {
+    opacity: 0.8;
+}"
+58,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_58.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+59,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+60,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_60 {
+    padding: var(--custom-prop-60);
+}","mixins_60.scss
+ 49:35  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-60').,".tooltip::after_60 {
+    padding: var(----custom-prop-60);
+}"
+61,css,Stylelint Error: Unknown Property,".btn-action_61 {
+    margin-bot: 61px;
+    display: block;
+}","theme_61.scss
+ 70:25  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_61 {
+    margin-bottom: 61px;
+    display: block;
+}"
+62,css,PostCSS Parser Error: Unclosed Block,".btn-action_62 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_62 {","CssSyntaxError: main_62.scss:63:1: Unclosed block
+  61 |     background: #000;
+  62 |     opacity: 0.9;
+> 63 | 
+    | ^
+  64 | .element-sibling_62 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_62' before defining succeeding elements.,".btn-action_62 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_62 {"
+63,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_63 {
+    border-radius: 63px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+50 │     border-radius: 63px
+  │                    ^
+  ╵
+  app_63.css 50:27  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_63 {
+    border-radius: 63px;
+    overflow: hidden;
+}"
+64,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","navigation_64.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+65,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_65.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+66,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_66.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+67,css,Stylelint Warning: Unknown Pseudo-Class,".btn-action_67:hovr {
+    opacity: 0.8;
+}","main_67.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".btn-action_67:hover {
+    opacity: 0.8;
+}"
+68,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_68.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+69,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+70,css,Stylelint Error: CSS Variable Misuse,".btn-action_70 {
+    padding: var(--custom-prop-70);
+}","variables_70.scss
+ 59:40  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-70').,".btn-action_70 {
+    padding: var(----custom-prop-70);
+}"
+71,css,Stylelint Error: Unknown Property,"#user-profile-card_71 {
+    margin-bot: 71px;
+    display: block;
+}","grid_71.css
+ 29:17  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"#user-profile-card_71 {
+    margin-bottom: 71px;
+    display: block;
+}"
+72,css,PostCSS Parser Error: Unclosed Block,".btn-action_72 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_72 {","CssSyntaxError: app_72.css:31:1: Unclosed block
+  29 |     background: #000;
+  30 |     opacity: 0.9;
+> 31 | 
+    | ^
+  32 | .element-sibling_72 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_72' before defining succeeding elements.,".btn-action_72 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_72 {"
+73,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_73 {
+    border-radius: 73px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+85 │     border-radius: 73px
+  │                    ^
+  ╵
+  app_73.css 85:45  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_73 {
+    border-radius: 73px;
+    overflow: hidden;
+}"
+74,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_74.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+75,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_75.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+76,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_76.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+77,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_77:hovr {
+    opacity: 0.8;
+}","mixins_77.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_77:hover {
+    opacity: 0.8;
+}"
+78,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: grid_78.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+79,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+80,css,Stylelint Error: CSS Variable Misuse,"nav .item-link_80 {
+    padding: var(--custom-prop-80);
+}","app_80.css
+ 38:35  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-80').,"nav .item-link_80 {
+    padding: var(----custom-prop-80);
+}"
+81,css,Stylelint Error: Unknown Property,".tooltip::after_81 {
+    margin-bot: 81px;
+    display: block;
+}","navigation_81.css
+ 80:9  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".tooltip::after_81 {
+    margin-bottom: 81px;
+    display: block;
+}"
+82,css,PostCSS Parser Error: Unclosed Block,".tooltip::after_82 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_82 {","CssSyntaxError: app_82.css:64:1: Unclosed block
+  62 |     background: #000;
+  63 |     opacity: 0.9;
+> 64 | 
+    | ^
+  65 | .element-sibling_82 {",Introduce a closing curly brace '}' to isolate ruleset '.tooltip::after_82' before defining succeeding elements.,".tooltip::after_82 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_82 {"
+83,css,Sass Compiler Error: Missing Semicolon,".grid-container_83 {
+    border-radius: 83px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+70 │     border-radius: 83px
+  │                    ^
+  ╵
+  app_83.css 70:25  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_83 {
+    border-radius: 83px;
+    overflow: hidden;
+}"
+84,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_84.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+85,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_85.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+86,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_86.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+87,css,Stylelint Warning: Unknown Pseudo-Class,"@keyframes slide-in_87:hovr {
+    opacity: 0.8;
+}","navigation_87.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"@keyframes slide-in_87:hover {
+    opacity: 0.8;
+}"
+88,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_88.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+89,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+90,css,Stylelint Error: CSS Variable Misuse,"nav .item-link_90 {
+    padding: var(--custom-prop-90);
+}","app_90.css
+ 36:12  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-90').,"nav .item-link_90 {
+    padding: var(----custom-prop-90);
+}"
+91,css,Stylelint Error: Unknown Property,"#user-profile-card_91 {
+    margin-bot: 91px;
+    display: block;
+}","app_91.css
+ 21:19  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"#user-profile-card_91 {
+    margin-bottom: 91px;
+    display: block;
+}"
+92,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_92 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_92 {","CssSyntaxError: grid_92.css:60:1: Unclosed block
+  58 |     background: #000;
+  59 |     opacity: 0.9;
+> 60 | 
+    | ^
+  61 | .element-sibling_92 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_92' before defining succeeding elements.,"#user-profile-card_92 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_92 {"
+93,css,Sass Compiler Error: Missing Semicolon,"main > section_93 {
+    border-radius: 93px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+70 │     border-radius: 93px
+  │                    ^
+  ╵
+  variables_93.scss 70:11  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"main > section_93 {
+    border-radius: 93px;
+    overflow: hidden;
+}"
+94,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_94.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+95,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_95.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+96,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_96.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+97,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_97:hovr {
+    opacity: 0.8;
+}","theme_97.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_97:hover {
+    opacity: 0.8;
+}"
+98,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: variables_98.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+99,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+100,css,Stylelint Error: CSS Variable Misuse,".modal-overlay_100 {
+    padding: var(--custom-prop-100);
+}","theme_100.scss
+ 54:27  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-100').,".modal-overlay_100 {
+    padding: var(----custom-prop-100);
+}"
+101,css,Stylelint Error: Unknown Property,".grid-container_101 {
+    margin-bot: 101px;
+    display: block;
+}","mixins_101.scss
+ 89:16  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".grid-container_101 {
+    margin-bottom: 101px;
+    display: block;
+}"
+102,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_102 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_102 {","CssSyntaxError: navigation_102.css:68:1: Unclosed block
+  66 |     background: #000;
+  67 |     opacity: 0.9;
+> 68 | 
+    | ^
+  69 | .element-sibling_102 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_102' before defining succeeding elements.,"@keyframes slide-in_102 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_102 {"
+103,css,Sass Compiler Error: Missing Semicolon,".grid-container_103 {
+    border-radius: 103px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+19 │     border-radius: 103px
+  │                    ^
+  ╵
+  theme_103.scss 19:38  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_103 {
+    border-radius: 103px;
+    overflow: hidden;
+}"
+104,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_104.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+105,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_105.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+106,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_106.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+107,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_107:hovr {
+    opacity: 0.8;
+}","app_107.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_107:hover {
+    opacity: 0.8;
+}"
+108,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: variables_108.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+109,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+110,css,Stylelint Error: CSS Variable Misuse,"nav .item-link_110 {
+    padding: var(--custom-prop-110);
+}","theme_110.scss
+ 48:36  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-110').,"nav .item-link_110 {
+    padding: var(----custom-prop-110);
+}"
+111,css,Stylelint Error: Unknown Property,".tooltip::after_111 {
+    margin-bot: 111px;
+    display: block;
+}","navigation_111.css
+ 21:40  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".tooltip::after_111 {
+    margin-bottom: 111px;
+    display: block;
+}"
+112,css,PostCSS Parser Error: Unclosed Block,".btn-action_112 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_112 {","CssSyntaxError: grid_112.css:27:1: Unclosed block
+  25 |     background: #000;
+  26 |     opacity: 0.9;
+> 27 | 
+    | ^
+  28 | .element-sibling_112 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_112' before defining succeeding elements.,".btn-action_112 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_112 {"
+113,css,Sass Compiler Error: Missing Semicolon,".grid-container_113 {
+    border-radius: 113px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+9 │     border-radius: 113px
+  │                    ^
+  ╵
+  variables_113.scss 9:2  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_113 {
+    border-radius: 113px;
+    overflow: hidden;
+}"
+114,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_114.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+115,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_115.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+116,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  grid_116.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+117,css,Stylelint Warning: Unknown Pseudo-Class,".tooltip::after_117:hovr {
+    opacity: 0.8;
+}","variables_117.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".tooltip::after_117:hover {
+    opacity: 0.8;
+}"
+118,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_118.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+119,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+120,css,Stylelint Error: CSS Variable Misuse,"@keyframes slide-in_120 {
+    padding: var(--custom-prop-120);
+}","grid_120.css
+ 88:31  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-120').,"@keyframes slide-in_120 {
+    padding: var(----custom-prop-120);
+}"
+121,css,Stylelint Error: Unknown Property,"@keyframes slide-in_121 {
+    margin-bot: 121px;
+    display: block;
+}","mixins_121.scss
+ 48:8  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"@keyframes slide-in_121 {
+    margin-bottom: 121px;
+    display: block;
+}"
+122,css,PostCSS Parser Error: Unclosed Block,".grid-container_122 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_122 {","CssSyntaxError: mixins_122.scss:3:1: Unclosed block
+  1 |     background: #000;
+  2 |     opacity: 0.9;
+> 3 | 
+    | ^
+  4 | .element-sibling_122 {",Introduce a closing curly brace '}' to isolate ruleset '.grid-container_122' before defining succeeding elements.,".grid-container_122 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_122 {"
+123,css,Sass Compiler Error: Missing Semicolon,"main > section_123 {
+    border-radius: 123px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+3 │     border-radius: 123px
+  │                    ^
+  ╵
+  grid_123.css 3:40  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"main > section_123 {
+    border-radius: 123px;
+    overflow: hidden;
+}"
+124,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_124.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+125,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_125.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+126,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  app_126.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+127,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_127:hovr {
+    opacity: 0.8;
+}","navigation_127.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_127:hover {
+    opacity: 0.8;
+}"
+128,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_128.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+129,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+130,css,Stylelint Error: CSS Variable Misuse,"#user-profile-card_130 {
+    padding: var(--custom-prop-130);
+}","mixins_130.scss
+ 36:31  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-130').,"#user-profile-card_130 {
+    padding: var(----custom-prop-130);
+}"
+131,css,Stylelint Error: Unknown Property,".grid-container_131 {
+    margin-bot: 131px;
+    display: block;
+}","theme_131.scss
+ 40:45  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".grid-container_131 {
+    margin-bottom: 131px;
+    display: block;
+}"
+132,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_132 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_132 {","CssSyntaxError: mixins_132.scss:65:1: Unclosed block
+  63 |     background: #000;
+  64 |     opacity: 0.9;
+> 65 | 
+    | ^
+  66 | .element-sibling_132 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_132' before defining succeeding elements.,"#user-profile-card_132 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_132 {"
+133,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_133 {
+    border-radius: 133px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+82 │     border-radius: 133px
+  │                    ^
+  ╵
+  theme_133.scss 82:13  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_133 {
+    border-radius: 133px;
+    overflow: hidden;
+}"
+134,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","grid_134.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+135,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_135.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+136,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_136.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+137,css,Stylelint Warning: Unknown Pseudo-Class,".grid-container_137:hovr {
+    opacity: 0.8;
+}","navigation_137.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".grid-container_137:hover {
+    opacity: 0.8;
+}"
+138,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_138.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+139,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+140,css,Stylelint Error: CSS Variable Misuse,".grid-container_140 {
+    padding: var(--custom-prop-140);
+}","app_140.css
+ 59:5  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-140').,".grid-container_140 {
+    padding: var(----custom-prop-140);
+}"
+141,css,Stylelint Error: Unknown Property,"nav .item-link_141 {
+    margin-bot: 141px;
+    display: block;
+}","mixins_141.scss
+ 8:40  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_141 {
+    margin-bottom: 141px;
+    display: block;
+}"
+142,css,PostCSS Parser Error: Unclosed Block,".grid-container_142 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_142 {","CssSyntaxError: navigation_142.css:11:1: Unclosed block
+  9 |     background: #000;
+  10 |     opacity: 0.9;
+> 11 | 
+    | ^
+  12 | .element-sibling_142 {",Introduce a closing curly brace '}' to isolate ruleset '.grid-container_142' before defining succeeding elements.,".grid-container_142 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_142 {"
+143,css,Sass Compiler Error: Missing Semicolon,".tooltip::after_143 {
+    border-radius: 143px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+73 │     border-radius: 143px
+  │                    ^
+  ╵
+  variables_143.scss 73:43  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".tooltip::after_143 {
+    border-radius: 143px;
+    overflow: hidden;
+}"
+144,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","navigation_144.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+145,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_145.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+146,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_146.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+147,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_147:hovr {
+    opacity: 0.8;
+}","main_147.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_147:hover {
+    opacity: 0.8;
+}"
+148,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_148.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+149,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+150,css,Stylelint Error: CSS Variable Misuse,"nav .item-link_150 {
+    padding: var(--custom-prop-150);
+}","theme_150.scss
+ 94:34  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-150').,"nav .item-link_150 {
+    padding: var(----custom-prop-150);
+}"
+151,css,Stylelint Error: Unknown Property,"@keyframes slide-in_151 {
+    margin-bot: 151px;
+    display: block;
+}","app_151.css
+ 10:18  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"@keyframes slide-in_151 {
+    margin-bottom: 151px;
+    display: block;
+}"
+152,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_152 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_152 {","CssSyntaxError: variables_152.scss:18:1: Unclosed block
+  16 |     background: #000;
+  17 |     opacity: 0.9;
+> 18 | 
+    | ^
+  19 | .element-sibling_152 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_152' before defining succeeding elements.,".modal-overlay_152 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_152 {"
+153,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_153 {
+    border-radius: 153px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+86 │     border-radius: 153px
+  │                    ^
+  ╵
+  main_153.scss 86:37  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_153 {
+    border-radius: 153px;
+    overflow: hidden;
+}"
+154,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_154.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+155,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","main_155.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+156,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  app_156.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+157,css,Stylelint Warning: Unknown Pseudo-Class,".tooltip::after_157:hovr {
+    opacity: 0.8;
+}","app_157.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".tooltip::after_157:hover {
+    opacity: 0.8;
+}"
+158,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: grid_158.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+159,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+160,css,Stylelint Error: CSS Variable Misuse,".btn-action_160 {
+    padding: var(--custom-prop-160);
+}","main_160.scss
+ 69:25  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-160').,".btn-action_160 {
+    padding: var(----custom-prop-160);
+}"
+161,css,Stylelint Error: Unknown Property,"nav .item-link_161 {
+    margin-bot: 161px;
+    display: block;
+}","theme_161.scss
+ 23:5  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_161 {
+    margin-bottom: 161px;
+    display: block;
+}"
+162,css,PostCSS Parser Error: Unclosed Block,".grid-container_162 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_162 {","CssSyntaxError: theme_162.scss:11:1: Unclosed block
+  9 |     background: #000;
+  10 |     opacity: 0.9;
+> 11 | 
+    | ^
+  12 | .element-sibling_162 {",Introduce a closing curly brace '}' to isolate ruleset '.grid-container_162' before defining succeeding elements.,".grid-container_162 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_162 {"
+163,css,Sass Compiler Error: Missing Semicolon,".grid-container_163 {
+    border-radius: 163px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+86 │     border-radius: 163px
+  │                    ^
+  ╵
+  grid_163.css 86:25  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_163 {
+    border-radius: 163px;
+    overflow: hidden;
+}"
+164,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_164.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+165,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_165.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+166,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_166.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+167,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_167:hovr {
+    opacity: 0.8;
+}","main_167.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_167:hover {
+    opacity: 0.8;
+}"
+168,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_168.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+169,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+170,css,Stylelint Error: CSS Variable Misuse,"@keyframes slide-in_170 {
+    padding: var(--custom-prop-170);
+}","mixins_170.scss
+ 89:42  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-170').,"@keyframes slide-in_170 {
+    padding: var(----custom-prop-170);
+}"
+171,css,Stylelint Error: Unknown Property,".btn-action_171 {
+    margin-bot: 171px;
+    display: block;
+}","mixins_171.scss
+ 41:4  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_171 {
+    margin-bottom: 171px;
+    display: block;
+}"
+172,css,PostCSS Parser Error: Unclosed Block,".btn-action_172 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_172 {","CssSyntaxError: variables_172.scss:43:1: Unclosed block
+  41 |     background: #000;
+  42 |     opacity: 0.9;
+> 43 | 
+    | ^
+  44 | .element-sibling_172 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_172' before defining succeeding elements.,".btn-action_172 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_172 {"
+173,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_173 {
+    border-radius: 173px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+53 │     border-radius: 173px
+  │                    ^
+  ╵
+  navigation_173.css 53:14  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_173 {
+    border-radius: 173px;
+    overflow: hidden;
+}"
+174,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_174.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+175,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_175.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+176,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_176.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+177,css,Stylelint Warning: Unknown Pseudo-Class,"@keyframes slide-in_177:hovr {
+    opacity: 0.8;
+}","main_177.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"@keyframes slide-in_177:hover {
+    opacity: 0.8;
+}"
+178,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_178.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+179,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+180,css,Stylelint Error: CSS Variable Misuse,"@keyframes slide-in_180 {
+    padding: var(--custom-prop-180);
+}","navigation_180.css
+ 38:27  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-180').,"@keyframes slide-in_180 {
+    padding: var(----custom-prop-180);
+}"
+181,css,Stylelint Error: Unknown Property,"nav .item-link_181 {
+    margin-bot: 181px;
+    display: block;
+}","variables_181.scss
+ 3:19  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_181 {
+    margin-bottom: 181px;
+    display: block;
+}"
+182,css,PostCSS Parser Error: Unclosed Block,".tooltip::after_182 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_182 {","CssSyntaxError: grid_182.css:39:1: Unclosed block
+  37 |     background: #000;
+  38 |     opacity: 0.9;
+> 39 | 
+    | ^
+  40 | .element-sibling_182 {",Introduce a closing curly brace '}' to isolate ruleset '.tooltip::after_182' before defining succeeding elements.,".tooltip::after_182 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_182 {"
+183,css,Sass Compiler Error: Missing Semicolon,"#user-profile-card_183 {
+    border-radius: 183px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+77 │     border-radius: 183px
+  │                    ^
+  ╵
+  main_183.scss 77:35  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"#user-profile-card_183 {
+    border-radius: 183px;
+    overflow: hidden;
+}"
+184,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","variables_184.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+185,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_185.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+186,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  app_186.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+187,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_187:hovr {
+    opacity: 0.8;
+}","grid_187.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_187:hover {
+    opacity: 0.8;
+}"
+188,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_188.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+189,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+190,css,Stylelint Error: CSS Variable Misuse,"nav .item-link_190 {
+    padding: var(--custom-prop-190);
+}","navigation_190.css
+ 4:10  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-190').,"nav .item-link_190 {
+    padding: var(----custom-prop-190);
+}"
+191,css,Stylelint Error: Unknown Property,"@keyframes slide-in_191 {
+    margin-bot: 191px;
+    display: block;
+}","main_191.scss
+ 9:12  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"@keyframes slide-in_191 {
+    margin-bottom: 191px;
+    display: block;
+}"
+192,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_192 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_192 {","CssSyntaxError: theme_192.scss:5:1: Unclosed block
+  3 |     background: #000;
+  4 |     opacity: 0.9;
+> 5 | 
+    | ^
+  6 | .element-sibling_192 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_192' before defining succeeding elements.,"@keyframes slide-in_192 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_192 {"
+193,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_193 {
+    border-radius: 193px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+72 │     border-radius: 193px
+  │                    ^
+  ╵
+  navigation_193.css 72:36  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_193 {
+    border-radius: 193px;
+    overflow: hidden;
+}"
+194,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_194.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+195,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_195.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+196,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_196.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+197,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_197:hovr {
+    opacity: 0.8;
+}","app_197.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_197:hover {
+    opacity: 0.8;
+}"
+198,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_198.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+199,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+200,css,Stylelint Error: CSS Variable Misuse,".grid-container_200 {
+    padding: var(--custom-prop-200);
+}","grid_200.css
+ 83:10  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-200').,".grid-container_200 {
+    padding: var(----custom-prop-200);
+}"
+201,css,Stylelint Error: Unknown Property,".modal-overlay_201 {
+    margin-bot: 201px;
+    display: block;
+}","theme_201.scss
+ 39:34  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".modal-overlay_201 {
+    margin-bottom: 201px;
+    display: block;
+}"
+202,css,PostCSS Parser Error: Unclosed Block,".btn-action_202 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_202 {","CssSyntaxError: navigation_202.css:4:1: Unclosed block
+  2 |     background: #000;
+  3 |     opacity: 0.9;
+> 4 | 
+    | ^
+  5 | .element-sibling_202 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_202' before defining succeeding elements.,".btn-action_202 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_202 {"
+203,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_203 {
+    border-radius: 203px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+56 │     border-radius: 203px
+  │                    ^
+  ╵
+  navigation_203.css 56:45  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_203 {
+    border-radius: 203px;
+    overflow: hidden;
+}"
+204,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_204.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+205,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_205.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+206,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_206.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+207,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_207:hovr {
+    opacity: 0.8;
+}","app_207.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_207:hover {
+    opacity: 0.8;
+}"
+208,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_208.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+209,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+210,css,Stylelint Error: CSS Variable Misuse,"@keyframes slide-in_210 {
+    padding: var(--custom-prop-210);
+}","main_210.scss
+ 35:21  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-210').,"@keyframes slide-in_210 {
+    padding: var(----custom-prop-210);
+}"
+211,css,Stylelint Error: Unknown Property,".btn-action_211 {
+    margin-bot: 211px;
+    display: block;
+}","variables_211.scss
+ 25:42  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_211 {
+    margin-bottom: 211px;
+    display: block;
+}"
+212,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_212 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_212 {","CssSyntaxError: variables_212.scss:11:1: Unclosed block
+  9 |     background: #000;
+  10 |     opacity: 0.9;
+> 11 | 
+    | ^
+  12 | .element-sibling_212 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_212' before defining succeeding elements.,".modal-overlay_212 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_212 {"
+213,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_213 {
+    border-radius: 213px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+68 │     border-radius: 213px
+  │                    ^
+  ╵
+  navigation_213.css 68:4  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_213 {
+    border-radius: 213px;
+    overflow: hidden;
+}"
+214,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","navigation_214.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+215,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_215.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+216,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  app_216.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+217,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_217:hovr {
+    opacity: 0.8;
+}","variables_217.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_217:hover {
+    opacity: 0.8;
+}"
+218,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_218.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+219,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+220,css,Stylelint Error: CSS Variable Misuse,".btn-action_220 {
+    padding: var(--custom-prop-220);
+}","grid_220.css
+ 17:13  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-220').,".btn-action_220 {
+    padding: var(----custom-prop-220);
+}"
+221,css,Stylelint Error: Unknown Property,"main > section_221 {
+    margin-bot: 221px;
+    display: block;
+}","grid_221.css
+ 3:44  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"main > section_221 {
+    margin-bottom: 221px;
+    display: block;
+}"
+222,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_222 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_222 {","CssSyntaxError: grid_222.css:56:1: Unclosed block
+  54 |     background: #000;
+  55 |     opacity: 0.9;
+> 56 | 
+    | ^
+  57 | .element-sibling_222 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_222' before defining succeeding elements.,"@keyframes slide-in_222 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_222 {"
+223,css,Sass Compiler Error: Missing Semicolon,"main > section_223 {
+    border-radius: 223px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+46 │     border-radius: 223px
+  │                    ^
+  ╵
+  app_223.css 46:44  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"main > section_223 {
+    border-radius: 223px;
+    overflow: hidden;
+}"
+224,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_224.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+225,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","main_225.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+226,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_226.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+227,css,Stylelint Warning: Unknown Pseudo-Class,".btn-action_227:hovr {
+    opacity: 0.8;
+}","grid_227.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".btn-action_227:hover {
+    opacity: 0.8;
+}"
+228,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: grid_228.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+229,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+230,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_230 {
+    padding: var(--custom-prop-230);
+}","main_230.scss
+ 42:32  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-230').,".tooltip::after_230 {
+    padding: var(----custom-prop-230);
+}"
+231,css,Stylelint Error: Unknown Property,"nav .item-link_231 {
+    margin-bot: 231px;
+    display: block;
+}","main_231.scss
+ 95:5  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_231 {
+    margin-bottom: 231px;
+    display: block;
+}"
+232,css,PostCSS Parser Error: Unclosed Block,".grid-container_232 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_232 {","CssSyntaxError: grid_232.css:90:1: Unclosed block
+  88 |     background: #000;
+  89 |     opacity: 0.9;
+> 90 | 
+    | ^
+  91 | .element-sibling_232 {",Introduce a closing curly brace '}' to isolate ruleset '.grid-container_232' before defining succeeding elements.,".grid-container_232 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_232 {"
+233,css,Sass Compiler Error: Missing Semicolon,".grid-container_233 {
+    border-radius: 233px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+28 │     border-radius: 233px
+  │                    ^
+  ╵
+  grid_233.css 28:32  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_233 {
+    border-radius: 233px;
+    overflow: hidden;
+}"
+234,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_234.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+235,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_235.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+236,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_236.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+237,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_237:hovr {
+    opacity: 0.8;
+}","variables_237.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_237:hover {
+    opacity: 0.8;
+}"
+238,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_238.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+239,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+240,css,Stylelint Error: CSS Variable Misuse,"main > section_240 {
+    padding: var(--custom-prop-240);
+}","variables_240.scss
+ 26:42  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-240').,"main > section_240 {
+    padding: var(----custom-prop-240);
+}"
+241,css,Stylelint Error: Unknown Property,"#user-profile-card_241 {
+    margin-bot: 241px;
+    display: block;
+}","variables_241.scss
+ 49:31  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"#user-profile-card_241 {
+    margin-bottom: 241px;
+    display: block;
+}"
+242,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_242 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_242 {","CssSyntaxError: mixins_242.scss:95:1: Unclosed block
+  93 |     background: #000;
+  94 |     opacity: 0.9;
+> 95 | 
+    | ^
+  96 | .element-sibling_242 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_242' before defining succeeding elements.,"#user-profile-card_242 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_242 {"
+243,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_243 {
+    border-radius: 243px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+78 │     border-radius: 243px
+  │                    ^
+  ╵
+  app_243.css 78:29  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_243 {
+    border-radius: 243px;
+    overflow: hidden;
+}"
+244,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_244.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+245,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_245.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+246,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  grid_246.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+247,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_247:hovr {
+    opacity: 0.8;
+}","grid_247.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_247:hover {
+    opacity: 0.8;
+}"
+248,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_248.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+249,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+250,css,Stylelint Error: CSS Variable Misuse,"#user-profile-card_250 {
+    padding: var(--custom-prop-250);
+}","mixins_250.scss
+ 31:18  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-250').,"#user-profile-card_250 {
+    padding: var(----custom-prop-250);
+}"
+251,css,Stylelint Error: Unknown Property,".tooltip::after_251 {
+    margin-bot: 251px;
+    display: block;
+}","app_251.css
+ 74:16  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".tooltip::after_251 {
+    margin-bottom: 251px;
+    display: block;
+}"
+252,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_252 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_252 {","CssSyntaxError: variables_252.scss:61:1: Unclosed block
+  59 |     background: #000;
+  60 |     opacity: 0.9;
+> 61 | 
+    | ^
+  62 | .element-sibling_252 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_252' before defining succeeding elements.,"@keyframes slide-in_252 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_252 {"
+253,css,Sass Compiler Error: Missing Semicolon,".grid-container_253 {
+    border-radius: 253px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+4 │     border-radius: 253px
+  │                    ^
+  ╵
+  app_253.css 4:21  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_253 {
+    border-radius: 253px;
+    overflow: hidden;
+}"
+254,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_254.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+255,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","main_255.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+256,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  grid_256.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+257,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_257:hovr {
+    opacity: 0.8;
+}","main_257.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_257:hover {
+    opacity: 0.8;
+}"
+258,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: variables_258.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+259,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+260,css,Stylelint Error: CSS Variable Misuse,".modal-overlay_260 {
+    padding: var(--custom-prop-260);
+}","theme_260.scss
+ 56:24  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-260').,".modal-overlay_260 {
+    padding: var(----custom-prop-260);
+}"
+261,css,Stylelint Error: Unknown Property,".btn-action_261 {
+    margin-bot: 261px;
+    display: block;
+}","theme_261.scss
+ 33:3  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_261 {
+    margin-bottom: 261px;
+    display: block;
+}"
+262,css,PostCSS Parser Error: Unclosed Block,"main > section_262 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_262 {","CssSyntaxError: app_262.css:10:1: Unclosed block
+  8 |     background: #000;
+  9 |     opacity: 0.9;
+> 10 | 
+    | ^
+  11 | .element-sibling_262 {",Introduce a closing curly brace '}' to isolate ruleset 'main > section_262' before defining succeeding elements.,"main > section_262 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_262 {"
+263,css,Sass Compiler Error: Missing Semicolon,".tooltip::after_263 {
+    border-radius: 263px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+15 │     border-radius: 263px
+  │                    ^
+  ╵
+  variables_263.scss 15:16  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".tooltip::after_263 {
+    border-radius: 263px;
+    overflow: hidden;
+}"
+264,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_264.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+265,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","main_265.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+266,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_266.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+267,css,Stylelint Warning: Unknown Pseudo-Class,".tooltip::after_267:hovr {
+    opacity: 0.8;
+}","navigation_267.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".tooltip::after_267:hover {
+    opacity: 0.8;
+}"
+268,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_268.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+269,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+270,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_270 {
+    padding: var(--custom-prop-270);
+}","navigation_270.css
+ 39:28  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-270').,".tooltip::after_270 {
+    padding: var(----custom-prop-270);
+}"
+271,css,Stylelint Error: Unknown Property,"nav .item-link_271 {
+    margin-bot: 271px;
+    display: block;
+}","variables_271.scss
+ 31:9  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_271 {
+    margin-bottom: 271px;
+    display: block;
+}"
+272,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_272 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_272 {","CssSyntaxError: grid_272.css:82:1: Unclosed block
+  80 |     background: #000;
+  81 |     opacity: 0.9;
+> 82 | 
+    | ^
+  83 | .element-sibling_272 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_272' before defining succeeding elements.,"#user-profile-card_272 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_272 {"
+273,css,Sass Compiler Error: Missing Semicolon,"#user-profile-card_273 {
+    border-radius: 273px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+39 │     border-radius: 273px
+  │                    ^
+  ╵
+  app_273.css 39:31  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"#user-profile-card_273 {
+    border-radius: 273px;
+    overflow: hidden;
+}"
+274,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_274.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+275,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_275.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+276,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_276.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+277,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_277:hovr {
+    opacity: 0.8;
+}","variables_277.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_277:hover {
+    opacity: 0.8;
+}"
+278,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_278.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+279,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+280,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_280 {
+    padding: var(--custom-prop-280);
+}","grid_280.css
+ 34:14  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-280').,".tooltip::after_280 {
+    padding: var(----custom-prop-280);
+}"
+281,css,Stylelint Error: Unknown Property,"#user-profile-card_281 {
+    margin-bot: 281px;
+    display: block;
+}","theme_281.scss
+ 88:31  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"#user-profile-card_281 {
+    margin-bottom: 281px;
+    display: block;
+}"
+282,css,PostCSS Parser Error: Unclosed Block,".btn-action_282 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_282 {","CssSyntaxError: grid_282.css:43:1: Unclosed block
+  41 |     background: #000;
+  42 |     opacity: 0.9;
+> 43 | 
+    | ^
+  44 | .element-sibling_282 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_282' before defining succeeding elements.,".btn-action_282 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_282 {"
+283,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_283 {
+    border-radius: 283px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+37 │     border-radius: 283px
+  │                    ^
+  ╵
+  theme_283.scss 37:25  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_283 {
+    border-radius: 283px;
+    overflow: hidden;
+}"
+284,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_284.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+285,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_285.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+286,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_286.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+287,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_287:hovr {
+    opacity: 0.8;
+}","app_287.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_287:hover {
+    opacity: 0.8;
+}"
+288,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_288.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+289,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+290,css,Stylelint Error: CSS Variable Misuse,".btn-action_290 {
+    padding: var(--custom-prop-290);
+}","theme_290.scss
+ 46:35  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-290').,".btn-action_290 {
+    padding: var(----custom-prop-290);
+}"
+291,css,Stylelint Error: Unknown Property,"@keyframes slide-in_291 {
+    margin-bot: 291px;
+    display: block;
+}","app_291.css
+ 62:5  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"@keyframes slide-in_291 {
+    margin-bottom: 291px;
+    display: block;
+}"
+292,css,PostCSS Parser Error: Unclosed Block,".btn-action_292 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_292 {","CssSyntaxError: navigation_292.css:20:1: Unclosed block
+  18 |     background: #000;
+  19 |     opacity: 0.9;
+> 20 | 
+    | ^
+  21 | .element-sibling_292 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_292' before defining succeeding elements.,".btn-action_292 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_292 {"
+293,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_293 {
+    border-radius: 293px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+72 │     border-radius: 293px
+  │                    ^
+  ╵
+  navigation_293.css 72:39  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_293 {
+    border-radius: 293px;
+    overflow: hidden;
+}"
+294,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_294.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+295,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_295.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+296,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_296.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+297,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_297:hovr {
+    opacity: 0.8;
+}","navigation_297.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_297:hover {
+    opacity: 0.8;
+}"
+298,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: variables_298.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+299,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+300,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_300 {
+    padding: var(--custom-prop-300);
+}","app_300.css
+ 92:19  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-300').,".tooltip::after_300 {
+    padding: var(----custom-prop-300);
+}"
+301,css,Stylelint Error: Unknown Property,".btn-action_301 {
+    margin-bot: 301px;
+    display: block;
+}","variables_301.scss
+ 8:22  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_301 {
+    margin-bottom: 301px;
+    display: block;
+}"
+302,css,PostCSS Parser Error: Unclosed Block,".tooltip::after_302 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_302 {","CssSyntaxError: navigation_302.css:83:1: Unclosed block
+  81 |     background: #000;
+  82 |     opacity: 0.9;
+> 83 | 
+    | ^
+  84 | .element-sibling_302 {",Introduce a closing curly brace '}' to isolate ruleset '.tooltip::after_302' before defining succeeding elements.,".tooltip::after_302 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_302 {"
+303,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_303 {
+    border-radius: 303px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+29 │     border-radius: 303px
+  │                    ^
+  ╵
+  main_303.scss 29:23  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_303 {
+    border-radius: 303px;
+    overflow: hidden;
+}"
+304,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","variables_304.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+305,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_305.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+306,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_306.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+307,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_307:hovr {
+    opacity: 0.8;
+}","theme_307.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_307:hover {
+    opacity: 0.8;
+}"
+308,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_308.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+309,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+310,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_310 {
+    padding: var(--custom-prop-310);
+}","mixins_310.scss
+ 93:17  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-310').,".tooltip::after_310 {
+    padding: var(----custom-prop-310);
+}"
+311,css,Stylelint Error: Unknown Property,"#user-profile-card_311 {
+    margin-bot: 311px;
+    display: block;
+}","grid_311.css
+ 47:18  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"#user-profile-card_311 {
+    margin-bottom: 311px;
+    display: block;
+}"
+312,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_312 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_312 {","CssSyntaxError: theme_312.scss:37:1: Unclosed block
+  35 |     background: #000;
+  36 |     opacity: 0.9;
+> 37 | 
+    | ^
+  38 | .element-sibling_312 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_312' before defining succeeding elements.,".modal-overlay_312 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_312 {"
+313,css,Sass Compiler Error: Missing Semicolon,".grid-container_313 {
+    border-radius: 313px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+30 │     border-radius: 313px
+  │                    ^
+  ╵
+  mixins_313.scss 30:11  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_313 {
+    border-radius: 313px;
+    overflow: hidden;
+}"
+314,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","grid_314.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+315,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_315.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+316,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  app_316.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+317,css,Stylelint Warning: Unknown Pseudo-Class,"@keyframes slide-in_317:hovr {
+    opacity: 0.8;
+}","mixins_317.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"@keyframes slide-in_317:hover {
+    opacity: 0.8;
+}"
+318,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_318.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+319,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+320,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_320 {
+    padding: var(--custom-prop-320);
+}","theme_320.scss
+ 88:41  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-320').,".tooltip::after_320 {
+    padding: var(----custom-prop-320);
+}"
+321,css,Stylelint Error: Unknown Property,"main > section_321 {
+    margin-bot: 321px;
+    display: block;
+}","app_321.css
+ 32:21  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"main > section_321 {
+    margin-bottom: 321px;
+    display: block;
+}"
+322,css,PostCSS Parser Error: Unclosed Block,".btn-action_322 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_322 {","CssSyntaxError: theme_322.scss:69:1: Unclosed block
+  67 |     background: #000;
+  68 |     opacity: 0.9;
+> 69 | 
+    | ^
+  70 | .element-sibling_322 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_322' before defining succeeding elements.,".btn-action_322 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_322 {"
+323,css,Sass Compiler Error: Missing Semicolon,"main > section_323 {
+    border-radius: 323px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+66 │     border-radius: 323px
+  │                    ^
+  ╵
+  variables_323.scss 66:31  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"main > section_323 {
+    border-radius: 323px;
+    overflow: hidden;
+}"
+324,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_324.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+325,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_325.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+326,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_326.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+327,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_327:hovr {
+    opacity: 0.8;
+}","grid_327.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_327:hover {
+    opacity: 0.8;
+}"
+328,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_328.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+329,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+330,css,Stylelint Error: CSS Variable Misuse,"main > section_330 {
+    padding: var(--custom-prop-330);
+}","mixins_330.scss
+ 87:45  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-330').,"main > section_330 {
+    padding: var(----custom-prop-330);
+}"
+331,css,Stylelint Error: Unknown Property,".btn-action_331 {
+    margin-bot: 331px;
+    display: block;
+}","variables_331.scss
+ 28:27  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_331 {
+    margin-bottom: 331px;
+    display: block;
+}"
+332,css,PostCSS Parser Error: Unclosed Block,"main > section_332 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_332 {","CssSyntaxError: main_332.scss:72:1: Unclosed block
+  70 |     background: #000;
+  71 |     opacity: 0.9;
+> 72 | 
+    | ^
+  73 | .element-sibling_332 {",Introduce a closing curly brace '}' to isolate ruleset 'main > section_332' before defining succeeding elements.,"main > section_332 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_332 {"
+333,css,Sass Compiler Error: Missing Semicolon,".modal-overlay_333 {
+    border-radius: 333px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+40 │     border-radius: 333px
+  │                    ^
+  ╵
+  navigation_333.css 40:11  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".modal-overlay_333 {
+    border-radius: 333px;
+    overflow: hidden;
+}"
+334,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","variables_334.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+335,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_335.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+336,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_336.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+337,css,Stylelint Warning: Unknown Pseudo-Class,".tooltip::after_337:hovr {
+    opacity: 0.8;
+}","theme_337.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".tooltip::after_337:hover {
+    opacity: 0.8;
+}"
+338,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_338.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+339,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+340,css,Stylelint Error: CSS Variable Misuse,".grid-container_340 {
+    padding: var(--custom-prop-340);
+}","app_340.css
+ 49:2  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-340').,".grid-container_340 {
+    padding: var(----custom-prop-340);
+}"
+341,css,Stylelint Error: Unknown Property,".btn-action_341 {
+    margin-bot: 341px;
+    display: block;
+}","mixins_341.scss
+ 45:15  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_341 {
+    margin-bottom: 341px;
+    display: block;
+}"
+342,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_342 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_342 {","CssSyntaxError: app_342.css:71:1: Unclosed block
+  69 |     background: #000;
+  70 |     opacity: 0.9;
+> 71 | 
+    | ^
+  72 | .element-sibling_342 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_342' before defining succeeding elements.,".modal-overlay_342 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_342 {"
+343,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_343 {
+    border-radius: 343px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+67 │     border-radius: 343px
+  │                    ^
+  ╵
+  variables_343.scss 67:40  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_343 {
+    border-radius: 343px;
+    overflow: hidden;
+}"
+344,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","variables_344.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+345,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_345.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+346,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_346.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+347,css,Stylelint Warning: Unknown Pseudo-Class,".grid-container_347:hovr {
+    opacity: 0.8;
+}","main_347.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".grid-container_347:hover {
+    opacity: 0.8;
+}"
+348,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_348.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+349,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+350,css,Stylelint Error: CSS Variable Misuse,"@keyframes slide-in_350 {
+    padding: var(--custom-prop-350);
+}","navigation_350.css
+ 51:42  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-350').,"@keyframes slide-in_350 {
+    padding: var(----custom-prop-350);
+}"
+351,css,Stylelint Error: Unknown Property,".btn-action_351 {
+    margin-bot: 351px;
+    display: block;
+}","variables_351.scss
+ 84:4  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_351 {
+    margin-bottom: 351px;
+    display: block;
+}"
+352,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_352 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_352 {","CssSyntaxError: app_352.css:63:1: Unclosed block
+  61 |     background: #000;
+  62 |     opacity: 0.9;
+> 63 | 
+    | ^
+  64 | .element-sibling_352 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_352' before defining succeeding elements.,"@keyframes slide-in_352 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_352 {"
+353,css,Sass Compiler Error: Missing Semicolon,".btn-action_353 {
+    border-radius: 353px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+35 │     border-radius: 353px
+  │                    ^
+  ╵
+  variables_353.scss 35:19  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".btn-action_353 {
+    border-radius: 353px;
+    overflow: hidden;
+}"
+354,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_354.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+355,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_355.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+356,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_356.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+357,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_357:hovr {
+    opacity: 0.8;
+}","variables_357.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_357:hover {
+    opacity: 0.8;
+}"
+358,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_358.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+359,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+360,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_360 {
+    padding: var(--custom-prop-360);
+}","grid_360.css
+ 22:21  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-360').,".tooltip::after_360 {
+    padding: var(----custom-prop-360);
+}"
+361,css,Stylelint Error: Unknown Property,".grid-container_361 {
+    margin-bot: 361px;
+    display: block;
+}","app_361.css
+ 77:25  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".grid-container_361 {
+    margin-bottom: 361px;
+    display: block;
+}"
+362,css,PostCSS Parser Error: Unclosed Block,".btn-action_362 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_362 {","CssSyntaxError: navigation_362.css:46:1: Unclosed block
+  44 |     background: #000;
+  45 |     opacity: 0.9;
+> 46 | 
+    | ^
+  47 | .element-sibling_362 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_362' before defining succeeding elements.,".btn-action_362 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_362 {"
+363,css,Sass Compiler Error: Missing Semicolon,".btn-action_363 {
+    border-radius: 363px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+17 │     border-radius: 363px
+  │                    ^
+  ╵
+  theme_363.scss 17:30  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".btn-action_363 {
+    border-radius: 363px;
+    overflow: hidden;
+}"
+364,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","app_364.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+365,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_365.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+366,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_366.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+367,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_367:hovr {
+    opacity: 0.8;
+}","app_367.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_367:hover {
+    opacity: 0.8;
+}"
+368,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_368.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+369,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+370,css,Stylelint Error: CSS Variable Misuse,"#user-profile-card_370 {
+    padding: var(--custom-prop-370);
+}","app_370.css
+ 59:11  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-370').,"#user-profile-card_370 {
+    padding: var(----custom-prop-370);
+}"
+371,css,Stylelint Error: Unknown Property,".modal-overlay_371 {
+    margin-bot: 371px;
+    display: block;
+}","mixins_371.scss
+ 2:27  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".modal-overlay_371 {
+    margin-bottom: 371px;
+    display: block;
+}"
+372,css,PostCSS Parser Error: Unclosed Block,"nav .item-link_372 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_372 {","CssSyntaxError: app_372.css:34:1: Unclosed block
+  32 |     background: #000;
+  33 |     opacity: 0.9;
+> 34 | 
+    | ^
+  35 | .element-sibling_372 {",Introduce a closing curly brace '}' to isolate ruleset 'nav .item-link_372' before defining succeeding elements.,"nav .item-link_372 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_372 {"
+373,css,Sass Compiler Error: Missing Semicolon,".grid-container_373 {
+    border-radius: 373px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+35 │     border-radius: 373px
+  │                    ^
+  ╵
+  app_373.css 35:20  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".grid-container_373 {
+    border-radius: 373px;
+    overflow: hidden;
+}"
+374,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_374.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+375,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","mixins_375.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+376,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_376.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+377,css,Stylelint Warning: Unknown Pseudo-Class,".grid-container_377:hovr {
+    opacity: 0.8;
+}","mixins_377.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".grid-container_377:hover {
+    opacity: 0.8;
+}"
+378,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_378.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+379,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+380,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_380 {
+    padding: var(--custom-prop-380);
+}","mixins_380.scss
+ 19:7  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-380').,".tooltip::after_380 {
+    padding: var(----custom-prop-380);
+}"
+381,css,Stylelint Error: Unknown Property,"#user-profile-card_381 {
+    margin-bot: 381px;
+    display: block;
+}","theme_381.scss
+ 34:14  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"#user-profile-card_381 {
+    margin-bottom: 381px;
+    display: block;
+}"
+382,css,PostCSS Parser Error: Unclosed Block,"nav .item-link_382 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_382 {","CssSyntaxError: app_382.css:88:1: Unclosed block
+  86 |     background: #000;
+  87 |     opacity: 0.9;
+> 88 | 
+    | ^
+  89 | .element-sibling_382 {",Introduce a closing curly brace '}' to isolate ruleset 'nav .item-link_382' before defining succeeding elements.,"nav .item-link_382 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_382 {"
+383,css,Sass Compiler Error: Missing Semicolon,".modal-overlay_383 {
+    border-radius: 383px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+78 │     border-radius: 383px
+  │                    ^
+  ╵
+  app_383.css 78:39  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".modal-overlay_383 {
+    border-radius: 383px;
+    overflow: hidden;
+}"
+384,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_384.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+385,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","grid_385.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+386,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  grid_386.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+387,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_387:hovr {
+    opacity: 0.8;
+}","grid_387.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_387:hover {
+    opacity: 0.8;
+}"
+388,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: app_388.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+389,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+390,css,Stylelint Error: CSS Variable Misuse,".grid-container_390 {
+    padding: var(--custom-prop-390);
+}","theme_390.scss
+ 59:40  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-390').,".grid-container_390 {
+    padding: var(----custom-prop-390);
+}"
+391,css,Stylelint Error: Unknown Property,".modal-overlay_391 {
+    margin-bot: 391px;
+    display: block;
+}","grid_391.css
+ 63:40  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".modal-overlay_391 {
+    margin-bottom: 391px;
+    display: block;
+}"
+392,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_392 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_392 {","CssSyntaxError: variables_392.scss:6:1: Unclosed block
+  4 |     background: #000;
+  5 |     opacity: 0.9;
+> 6 | 
+    | ^
+  7 | .element-sibling_392 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_392' before defining succeeding elements.,"#user-profile-card_392 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_392 {"
+393,css,Sass Compiler Error: Missing Semicolon,".modal-overlay_393 {
+    border-radius: 393px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+85 │     border-radius: 393px
+  │                    ^
+  ╵
+  app_393.css 85:15  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".modal-overlay_393 {
+    border-radius: 393px;
+    overflow: hidden;
+}"
+394,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","variables_394.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+395,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_395.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+396,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_396.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+397,css,Stylelint Warning: Unknown Pseudo-Class,".modal-overlay_397:hovr {
+    opacity: 0.8;
+}","navigation_397.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".modal-overlay_397:hover {
+    opacity: 0.8;
+}"
+398,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_398.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+399,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+400,css,Stylelint Error: CSS Variable Misuse,".grid-container_400 {
+    padding: var(--custom-prop-400);
+}","main_400.scss
+ 39:25  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-400').,".grid-container_400 {
+    padding: var(----custom-prop-400);
+}"
+401,css,Stylelint Error: Unknown Property,".modal-overlay_401 {
+    margin-bot: 401px;
+    display: block;
+}","theme_401.scss
+ 69:20  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".modal-overlay_401 {
+    margin-bottom: 401px;
+    display: block;
+}"
+402,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_402 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_402 {","CssSyntaxError: mixins_402.scss:8:1: Unclosed block
+  6 |     background: #000;
+  7 |     opacity: 0.9;
+> 8 | 
+    | ^
+  9 | .element-sibling_402 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_402' before defining succeeding elements.,"#user-profile-card_402 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_402 {"
+403,css,Sass Compiler Error: Missing Semicolon,"main > section_403 {
+    border-radius: 403px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+34 │     border-radius: 403px
+  │                    ^
+  ╵
+  app_403.css 34:4  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"main > section_403 {
+    border-radius: 403px;
+    overflow: hidden;
+}"
+404,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_404.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+405,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","main_405.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+406,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_406.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+407,css,Stylelint Warning: Unknown Pseudo-Class,".tooltip::after_407:hovr {
+    opacity: 0.8;
+}","app_407.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".tooltip::after_407:hover {
+    opacity: 0.8;
+}"
+408,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_408.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+409,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+410,css,Stylelint Error: CSS Variable Misuse,".grid-container_410 {
+    padding: var(--custom-prop-410);
+}","mixins_410.scss
+ 26:2  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-410').,".grid-container_410 {
+    padding: var(----custom-prop-410);
+}"
+411,css,Stylelint Error: Unknown Property,".modal-overlay_411 {
+    margin-bot: 411px;
+    display: block;
+}","grid_411.css
+ 60:16  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".modal-overlay_411 {
+    margin-bottom: 411px;
+    display: block;
+}"
+412,css,PostCSS Parser Error: Unclosed Block,".btn-action_412 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_412 {","CssSyntaxError: grid_412.css:73:1: Unclosed block
+  71 |     background: #000;
+  72 |     opacity: 0.9;
+> 73 | 
+    | ^
+  74 | .element-sibling_412 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_412' before defining succeeding elements.,".btn-action_412 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_412 {"
+413,css,Sass Compiler Error: Missing Semicolon,"@keyframes slide-in_413 {
+    border-radius: 413px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+72 │     border-radius: 413px
+  │                    ^
+  ╵
+  mixins_413.scss 72:24  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"@keyframes slide-in_413 {
+    border-radius: 413px;
+    overflow: hidden;
+}"
+414,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","theme_414.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+415,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_415.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+416,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_416.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+417,css,Stylelint Warning: Unknown Pseudo-Class,"#user-profile-card_417:hovr {
+    opacity: 0.8;
+}","app_417.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"#user-profile-card_417:hover {
+    opacity: 0.8;
+}"
+418,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_418.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+419,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+420,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_420 {
+    padding: var(--custom-prop-420);
+}","navigation_420.css
+ 58:16  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-420').,".tooltip::after_420 {
+    padding: var(----custom-prop-420);
+}"
+421,css,Stylelint Error: Unknown Property,".modal-overlay_421 {
+    margin-bot: 421px;
+    display: block;
+}","navigation_421.css
+ 26:15  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".modal-overlay_421 {
+    margin-bottom: 421px;
+    display: block;
+}"
+422,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_422 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_422 {","CssSyntaxError: app_422.css:60:1: Unclosed block
+  58 |     background: #000;
+  59 |     opacity: 0.9;
+> 60 | 
+    | ^
+  61 | .element-sibling_422 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_422' before defining succeeding elements.,".modal-overlay_422 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_422 {"
+423,css,Sass Compiler Error: Missing Semicolon,".tooltip::after_423 {
+    border-radius: 423px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+66 │     border-radius: 423px
+  │                    ^
+  ╵
+  mixins_423.scss 66:25  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".tooltip::after_423 {
+    border-radius: 423px;
+    overflow: hidden;
+}"
+424,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_424.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+425,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_425.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+426,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  theme_426.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+427,css,Stylelint Warning: Unknown Pseudo-Class,"@keyframes slide-in_427:hovr {
+    opacity: 0.8;
+}","navigation_427.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"@keyframes slide-in_427:hover {
+    opacity: 0.8;
+}"
+428,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_428.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+429,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+430,css,Stylelint Error: CSS Variable Misuse,"nav .item-link_430 {
+    padding: var(--custom-prop-430);
+}","variables_430.scss
+ 32:42  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-430').,"nav .item-link_430 {
+    padding: var(----custom-prop-430);
+}"
+431,css,Stylelint Error: Unknown Property,"main > section_431 {
+    margin-bot: 431px;
+    display: block;
+}","main_431.scss
+ 26:43  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"main > section_431 {
+    margin-bottom: 431px;
+    display: block;
+}"
+432,css,PostCSS Parser Error: Unclosed Block,".btn-action_432 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_432 {","CssSyntaxError: mixins_432.scss:55:1: Unclosed block
+  53 |     background: #000;
+  54 |     opacity: 0.9;
+> 55 | 
+    | ^
+  56 | .element-sibling_432 {",Introduce a closing curly brace '}' to isolate ruleset '.btn-action_432' before defining succeeding elements.,".btn-action_432 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_432 {"
+433,css,Sass Compiler Error: Missing Semicolon,"nav .item-link_433 {
+    border-radius: 433px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+63 │     border-radius: 433px
+  │                    ^
+  ╵
+  theme_433.scss 63:23  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"nav .item-link_433 {
+    border-radius: 433px;
+    overflow: hidden;
+}"
+434,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_434.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+435,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_435.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+436,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_436.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+437,css,Stylelint Warning: Unknown Pseudo-Class,"main > section_437:hovr {
+    opacity: 0.8;
+}","variables_437.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"main > section_437:hover {
+    opacity: 0.8;
+}"
+438,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: mixins_438.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+439,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+440,css,Stylelint Error: CSS Variable Misuse,".btn-action_440 {
+    padding: var(--custom-prop-440);
+}","mixins_440.scss
+ 50:43  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-440').,".btn-action_440 {
+    padding: var(----custom-prop-440);
+}"
+441,css,Stylelint Error: Unknown Property,".grid-container_441 {
+    margin-bot: 441px;
+    display: block;
+}","navigation_441.css
+ 21:22  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".grid-container_441 {
+    margin-bottom: 441px;
+    display: block;
+}"
+442,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_442 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_442 {","CssSyntaxError: theme_442.scss:29:1: Unclosed block
+  27 |     background: #000;
+  28 |     opacity: 0.9;
+> 29 | 
+    | ^
+  30 | .element-sibling_442 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_442' before defining succeeding elements.,"#user-profile-card_442 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_442 {"
+443,css,Sass Compiler Error: Missing Semicolon,".btn-action_443 {
+    border-radius: 443px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+64 │     border-radius: 443px
+  │                    ^
+  ╵
+  navigation_443.css 64:31  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".btn-action_443 {
+    border-radius: 443px;
+    overflow: hidden;
+}"
+444,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","variables_444.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+445,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","theme_445.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+446,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  main_446.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+447,css,Stylelint Warning: Unknown Pseudo-Class,".btn-action_447:hovr {
+    opacity: 0.8;
+}","main_447.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".btn-action_447:hover {
+    opacity: 0.8;
+}"
+448,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: theme_448.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+449,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+450,css,Stylelint Error: CSS Variable Misuse,"main > section_450 {
+    padding: var(--custom-prop-450);
+}","app_450.css
+ 51:32  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-450').,"main > section_450 {
+    padding: var(----custom-prop-450);
+}"
+451,css,Stylelint Error: Unknown Property,".grid-container_451 {
+    margin-bot: 451px;
+    display: block;
+}","variables_451.scss
+ 77:12  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".grid-container_451 {
+    margin-bottom: 451px;
+    display: block;
+}"
+452,css,PostCSS Parser Error: Unclosed Block,".tooltip::after_452 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_452 {","CssSyntaxError: mixins_452.scss:34:1: Unclosed block
+  32 |     background: #000;
+  33 |     opacity: 0.9;
+> 34 | 
+    | ^
+  35 | .element-sibling_452 {",Introduce a closing curly brace '}' to isolate ruleset '.tooltip::after_452' before defining succeeding elements.,".tooltip::after_452 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_452 {"
+453,css,Sass Compiler Error: Missing Semicolon,"#user-profile-card_453 {
+    border-radius: 453px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+75 │     border-radius: 453px
+  │                    ^
+  ╵
+  mixins_453.scss 75:43  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"#user-profile-card_453 {
+    border-radius: 453px;
+    overflow: hidden;
+}"
+454,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_454.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+455,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_455.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+456,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  navigation_456.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+457,css,Stylelint Warning: Unknown Pseudo-Class,".btn-action_457:hovr {
+    opacity: 0.8;
+}","variables_457.scss
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".btn-action_457:hover {
+    opacity: 0.8;
+}"
+458,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_458.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+459,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+460,css,Stylelint Error: CSS Variable Misuse,"@keyframes slide-in_460 {
+    padding: var(--custom-prop-460);
+}","navigation_460.css
+ 17:38  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-460').,"@keyframes slide-in_460 {
+    padding: var(----custom-prop-460);
+}"
+461,css,Stylelint Error: Unknown Property,"@keyframes slide-in_461 {
+    margin-bot: 461px;
+    display: block;
+}","variables_461.scss
+ 66:19  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"@keyframes slide-in_461 {
+    margin-bottom: 461px;
+    display: block;
+}"
+462,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_462 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_462 {","CssSyntaxError: navigation_462.css:83:1: Unclosed block
+  81 |     background: #000;
+  82 |     opacity: 0.9;
+> 83 | 
+    | ^
+  84 | .element-sibling_462 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_462' before defining succeeding elements.,"@keyframes slide-in_462 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_462 {"
+463,css,Sass Compiler Error: Missing Semicolon,".btn-action_463 {
+    border-radius: 463px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+8 │     border-radius: 463px
+  │                    ^
+  ╵
+  grid_463.css 8:45  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".btn-action_463 {
+    border-radius: 463px;
+    overflow: hidden;
+}"
+464,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","navigation_464.css
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+465,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","variables_465.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+466,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  mixins_466.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+467,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_467:hovr {
+    opacity: 0.8;
+}","grid_467.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_467:hover {
+    opacity: 0.8;
+}"
+468,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_468.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+469,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+470,css,Stylelint Error: CSS Variable Misuse,".modal-overlay_470 {
+    padding: var(--custom-prop-470);
+}","theme_470.scss
+ 73:15  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-470').,".modal-overlay_470 {
+    padding: var(----custom-prop-470);
+}"
+471,css,Stylelint Error: Unknown Property,"nav .item-link_471 {
+    margin-bot: 471px;
+    display: block;
+}","variables_471.scss
+ 11:17  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_471 {
+    margin-bottom: 471px;
+    display: block;
+}"
+472,css,PostCSS Parser Error: Unclosed Block,"#user-profile-card_472 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_472 {","CssSyntaxError: navigation_472.css:29:1: Unclosed block
+  27 |     background: #000;
+  28 |     opacity: 0.9;
+> 29 | 
+    | ^
+  30 | .element-sibling_472 {",Introduce a closing curly brace '}' to isolate ruleset '#user-profile-card_472' before defining succeeding elements.,"#user-profile-card_472 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_472 {"
+473,css,Sass Compiler Error: Missing Semicolon,"#user-profile-card_473 {
+    border-radius: 473px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+28 │     border-radius: 473px
+  │                    ^
+  ╵
+  main_473.scss 28:40  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"#user-profile-card_473 {
+    border-radius: 473px;
+    overflow: hidden;
+}"
+474,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_474.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+475,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","main_475.scss
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+476,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  grid_476.css 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+477,css,Stylelint Warning: Unknown Pseudo-Class,"nav .item-link_477:hovr {
+    opacity: 0.8;
+}","app_477.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,"nav .item-link_477:hover {
+    opacity: 0.8;
+}"
+478,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: navigation_478.css:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+479,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+480,css,Stylelint Error: CSS Variable Misuse,".btn-action_480 {
+    padding: var(--custom-prop-480);
+}","grid_480.css
+ 20:13  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-480').,".btn-action_480 {
+    padding: var(----custom-prop-480);
+}"
+481,css,Stylelint Error: Unknown Property,"nav .item-link_481 {
+    margin-bot: 481px;
+    display: block;
+}","app_481.css
+ 64:14  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,"nav .item-link_481 {
+    margin-bottom: 481px;
+    display: block;
+}"
+482,css,PostCSS Parser Error: Unclosed Block,".modal-overlay_482 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_482 {","CssSyntaxError: variables_482.scss:35:1: Unclosed block
+  33 |     background: #000;
+  34 |     opacity: 0.9;
+> 35 | 
+    | ^
+  36 | .element-sibling_482 {",Introduce a closing curly brace '}' to isolate ruleset '.modal-overlay_482' before defining succeeding elements.,".modal-overlay_482 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_482 {"
+483,css,Sass Compiler Error: Missing Semicolon,"main > section_483 {
+    border-radius: 483px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+20 │     border-radius: 483px
+  │                    ^
+  ╵
+  app_483.css 20:41  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,"main > section_483 {
+    border-radius: 483px;
+    overflow: hidden;
+}"
+484,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","mixins_484.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+485,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","navigation_485.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+486,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_486.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+487,css,Stylelint Warning: Unknown Pseudo-Class,".btn-action_487:hovr {
+    opacity: 0.8;
+}","navigation_487.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".btn-action_487:hover {
+    opacity: 0.8;
+}"
+488,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_488.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+489,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+490,css,Stylelint Error: CSS Variable Misuse,".tooltip::after_490 {
+    padding: var(--custom-prop-490);
+}","grid_490.css
+ 34:28  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-490').,".tooltip::after_490 {
+    padding: var(----custom-prop-490);
+}"
+491,css,Stylelint Error: Unknown Property,".btn-action_491 {
+    margin-bot: 491px;
+    display: block;
+}","theme_491.scss
+ 81:8  ✖  Unexpected unknown property ""margin-bot""  property-no-unknown",Correct the spelled property suffix 'margin-bot' to standard 'margin-bottom'.,".btn-action_491 {
+    margin-bottom: 491px;
+    display: block;
+}"
+492,css,PostCSS Parser Error: Unclosed Block,"@keyframes slide-in_492 {
+    background: #000;
+    opacity: 0.9;
+
+.element-sibling_492 {","CssSyntaxError: grid_492.css:62:1: Unclosed block
+  60 |     background: #000;
+  61 |     opacity: 0.9;
+> 62 | 
+    | ^
+  63 | .element-sibling_492 {",Introduce a closing curly brace '}' to isolate ruleset '@keyframes slide-in_492' before defining succeeding elements.,"@keyframes slide-in_492 {
+    background: #000;
+    opacity: 0.9;
+}
+.element-sibling_492 {"
+493,css,Sass Compiler Error: Missing Semicolon,".btn-action_493 {
+    border-radius: 493px
+    overflow: hidden;
+}","Error: Expected "";"".
+  ╷
+24 │     border-radius: 493px
+  │                    ^
+  ╵
+  variables_493.scss 24:34  root stylesheet",Insert a closing statement semicolon to end the style definition declaration.,".btn-action_493 {
+    border-radius: 493px;
+    overflow: hidden;
+}"
+494,css,Stylelint Error: Invalid Hex Color,"main > section {
+    background-color: #ffg000;
+}","main_494.scss
+ 2:23  ✖  Unexpected invalid hex color ""#ffg000""  color-no-invalid-hex",Correct the hex color containing non-hexadecimal character 'g'.,"main > section {
+    background-color: #ff5000;
+}"
+495,css,Stylelint Error: Duplicate Property,"nav .item-link {
+    display: block;
+    padding: 8px;
+    display: inline-block;
+}","app_495.css
+ 4:5  ✖  Unexpected duplicate ""display""  no-duplicate-properties",Remove the duplicate 'display' layout parameter to avoid cascading overrides.,"nav .item-link {
+    display: inline-block;
+    padding: 8px;
+}"
+496,css,Sass Compiler Error: Malformed calc(),".grid-container {
+    width: calc(100% -);
+}","Error: Expected expression.
+  ╷
+2 │     width: calc(100% -);
+  │                        ^
+  ╵
+  variables_496.scss 2:24  root stylesheet",Complete the subtraction expression inside the calc() block by providing a valid operand.,".grid-container {
+    width: calc(100% - 40px);
+}"
+497,css,Stylelint Warning: Unknown Pseudo-Class,".btn-action_497:hovr {
+    opacity: 0.8;
+}","navigation_497.css
+ 1:12  ✖  Unexpected unknown pseudo-class selector "":hovr""  selector-pseudo-class-no-unknown",Correct the typo in the pseudo-class name from ':hovr' to ':hover'.,".btn-action_497:hover {
+    opacity: 0.8;
+}"
+498,css,PostCSS Parser Error: Missing Colon,".tooltip::after {
+    content ""Tooltip text"";
+}","CssSyntaxError: main_498.scss:2:13: Missed colon
+  1 | .tooltip::after {
+> 2 |     content ""Tooltip text"";
+    |             ^
+  3 | }",Insert the required colon separator between the property and value declarations.,".tooltip::after {
+    content: ""Tooltip text"";
+}"
+499,css,DevTools CSS Warning: Invalid Media Query,"@media screen and (max-width: 768) {
+    body { font-size: 14px; }
+}","DevTools Warning: Invalid media query length value '768'. CSS media queries require explicit length units (e.g., px, em, rem).",Add an explicit unit (like 'px') to the max-width length parameter.,"@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}"
+500,css,Stylelint Error: CSS Variable Misuse,".grid-container_500 {
+    padding: var(--custom-prop-500);
+}","app_500.css
+ 33:26  ✖  Expected custom property syntax ""--"" inside var() function  custom-property-no-missing-dash",Correct custom variable calls inside the var() block to include the double-dash prefix ('----custom-prop-500').,".grid-container_500 {
+    padding: var(----custom-prop-500);
+}"
