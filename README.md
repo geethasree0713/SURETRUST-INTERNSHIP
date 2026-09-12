@@ -399,11 +399,11 @@ During the development of DebugAssist, I worked on the following areas:
 
 ### Project Repository
 
-[**→ View GitHub Repository**]([[PUT_YOUR_GITHUB_REPOSITORY_LINK_HERE](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/tree/main/suretrust/capstone)](https://github.com/sure-trust/MANYAM-GEETHA-SREE-g5-gen-ai/tree/main/Creation-of-Intelligent-Bug-Diagnosis-Platform-with-Fix-Recommendation-Assistance-Group-1-main))
+[**→ View GitHub Repository**](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/tree/main/suretrust/capstone)
 
 ### Project Report
 
-[**→ View Full Project Report**]([[PUT_YOUR_PROJECT_REPORT_LINK_HERE](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/capstone/REPORT-sureTrust.pdf)](https://github.com/sure-trust/MANYAM-GEETHA-SREE-g5-gen-ai/blob/main/Creation-of-Intelligent-Bug-Diagnosis-Platform-with-Fix-Recommendation-Assistance-Group-1-main/REPORT-sureTrust.pdf))
+[**→ View Full Project Report**](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/capstone/REPORT-sureTrust.pdf)
 
 ---
 
@@ -474,9 +474,9 @@ As part of the SURE ProEd internship program, I participated in community-orient
 
 ### Photos
 
-![Community Service - Food Distribution]([https://github.com/sure-trust/MANYAM-GEETHA-SREE-g5-gen-ai/blob/main/community-services/food.png?raw=true](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/community-services/food.png))
+![Community Service - Food Distribution](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/community-services/food.png)
 
-![Community Service - Tree Plantation]([https://github.com/sure-trust/MANYAM-GEETHA-SREE-g5-gen-ai/blob/main/community-services/planting.png?raw=true](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/community-services/planting.png))
+![Community Service - Tree Plantation](https://github.com/geethasree0713/SURETRUST-INTERNSHIP/blob/main/suretrust/community-services/planting.png)
 
 ---
 
